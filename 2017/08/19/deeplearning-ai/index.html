@@ -29,7 +29,7 @@
 <meta property="og:description" content="Gradient Sescent   If the learning rate is too large (0.01), the cost may oscillate up and down. It may even diverge (refer to the graph above). A lower cost doesn’t mean a better model. You have to c">
 <meta property="og:image" content="http://yoursite.com/2017/08/19/deeplearning-ai/sgd.gif">
 <meta property="og:image" content="http://yoursite.com/2017/08/19/deeplearning-ai/sgd_bad.gif">
-<meta property="og:updated_time" content="2017-08-19T07:01:55.000Z">
+<meta property="og:updated_time" content="2017-08-19T07:25:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="deeplearning.ai">
 <meta name="twitter:description" content="Gradient Sescent   If the learning rate is too large (0.01), the cost may oscillate up and down. It may even diverge (refer to the graph above). A lower cost doesn’t mean a better model. You have to c">
@@ -171,7 +171,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Gradient-Sescent"><span class="post-toc-number">1.</span> <span class="post-toc-text">Gradient Sescent</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Tips"><span class="post-toc-number">2.</span> <span class="post-toc-text">Tips</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#General-methodology-to-build-a-Neural-Network"><span class="post-toc-number">3.</span> <span class="post-toc-text">General methodology to build a Neural Network:</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Initialization"><span class="post-toc-number">4.</span> <span class="post-toc-text">Initialization</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Deal-with-high-variance"><span class="post-toc-number">5.</span> <span class="post-toc-text">Deal with high variance</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Regularization"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">Regularization</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#L2-regularization"><span class="post-toc-number">5.1.1.</span> <span class="post-toc-text">L2-regularization</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Dropout"><span class="post-toc-number">6.</span> <span class="post-toc-text">Dropout</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Gradient-Checking"><span class="post-toc-number">7.</span> <span class="post-toc-text">Gradient Checking</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Mini-batch-Gradient-Descent-and-Stochastic-Gradient-Descent-SGD"><span class="post-toc-number">8.</span> <span class="post-toc-text">Mini-batch Gradient Descent and Stochastic Gradient Descent (SGD)</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Gradient-descent-with-Momentum"><span class="post-toc-number">9.</span> <span class="post-toc-text">Gradient descent with Momentum</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Gradient-Sescent"><span class="post-toc-number">1.</span> <span class="post-toc-text">Gradient Sescent</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Tips"><span class="post-toc-number">2.</span> <span class="post-toc-text">Tips</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#General-methodology-to-build-a-Neural-Network"><span class="post-toc-number">3.</span> <span class="post-toc-text">General methodology to build a Neural Network:</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Initialization"><span class="post-toc-number">4.</span> <span class="post-toc-text">Initialization</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Deal-with-high-variance"><span class="post-toc-number">5.</span> <span class="post-toc-text">Deal with high variance</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Regularization"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">Regularization</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#L2-regularization"><span class="post-toc-number">5.1.1.</span> <span class="post-toc-text">L2-regularization</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Dropout"><span class="post-toc-number">5.1.2.</span> <span class="post-toc-text">Dropout</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Gradient-Checking"><span class="post-toc-number">6.</span> <span class="post-toc-text">Gradient Checking</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Mini-batch-Gradient-Descent-and-Stochastic-Gradient-Descent-SGD"><span class="post-toc-number">7.</span> <span class="post-toc-text">Mini-batch Gradient Descent and Stochastic Gradient Descent (SGD)</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Gradient-descent-with-Momentum"><span class="post-toc-number">8.</span> <span class="post-toc-text">Gradient descent with Momentum</span></a></li></ol>
         </nav>
     </aside>
     
@@ -247,7 +247,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="Dropout"><a href="#Dropout" class="headerlink" title="Dropout"></a>Dropout</h1><ul>
+<h3 id="Dropout"><a href="#Dropout" class="headerlink" title="Dropout"></a>Dropout</h3><ul>
 <li>Dropout is a regularization technique.</li>
 <li>You only use dropout during training. Don’t use dropout (randomly eliminate nodes) during test time.</li>
 <li>Apply dropout both during forward and backward propagation.</li>
@@ -276,7 +276,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-08-19T07:01:55.000Z" itemprop="dateUpdated">2017-08-19 15:01:55</time>
+    Last updated: <time datetime="2017-08-19T07:25:20.000Z" itemprop="dateUpdated">2017-08-19 15:25:20</time>
 </span><br>
 
 
