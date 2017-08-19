@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Data Science | Terry&#39;s Notebook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="To be categorizedUdacity Career Development resources CheatsheetEssential Cheat Sheets for Machine Learning and Deep Learning Engineers Notes from ND009algorithm mentionedsupervised learning decision">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Data Science">
+<meta property="og:url" content="http://yoursite.com/2017/04/24/data-science/index.html">
+<meta property="og:site_name" content="Terry's Notebook">
+<meta property="og:description" content="To be categorizedUdacity Career Development resources CheatsheetEssential Cheat Sheets for Machine Learning and Deep Learning Engineers Notes from ND009algorithm mentionedsupervised learning decision">
+<meta property="og:image" content="http://yoursite.com/2017/04/24/data-science/log-loss-curve.png">
+<meta property="og:updated_time" content="2017-08-19T06:37:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Data Science">
+<meta name="twitter:description" content="To be categorizedUdacity Career Development resources CheatsheetEssential Cheat Sheets for Machine Learning and Deep Learning Engineers Notes from ND009algorithm mentionedsupervised learning decision">
+<meta name="twitter:image" content="http://yoursite.com/2017/04/24/data-science/log-loss-curve.png">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Terry Li</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Data Science</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Data Science</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-04-24T14:40:05.000Z" itemprop="datePublished" class="page-time">
+  2017-04-24
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#To-be-categorized"><span class="post-toc-number">1.</span> <span class="post-toc-text">To be categorized</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Cheatsheet"><span class="post-toc-number">2.</span> <span class="post-toc-text">Cheatsheet</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Notes-from-ND009"><span class="post-toc-number">3.</span> <span class="post-toc-text">Notes from ND009</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#algorithm-mentioned"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">algorithm mentioned</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#supervised-learning"><span class="post-toc-number">3.1.1.</span> <span class="post-toc-text">supervised learning</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#unsupervised-learning"><span class="post-toc-number">3.1.2.</span> <span class="post-toc-text">unsupervised learning</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#other"><span class="post-toc-number">3.1.3.</span> <span class="post-toc-text">other</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#a-introduction-of-Naive-Bayes-Theorem"><span class="post-toc-number">3.1.4.</span> <span class="post-toc-text">a introduction of Naive Bayes Theorem</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#a-introduction-of-bag-of-words"><span class="post-toc-number">3.1.5.</span> <span class="post-toc-text">a introduction of bag of words</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#FORWARD-PROPAGATION-FROM-X-TO-COST"><span class="post-toc-number">4.</span> <span class="post-toc-text">FORWARD PROPAGATION (FROM X TO COST)</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#BACKWARD-PROPAGATION-TO-FIND-GRAD"><span class="post-toc-number">5.</span> <span class="post-toc-text">BACKWARD PROPAGATION (TO FIND GRAD)</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Get-a-job"><span class="post-toc-number">6.</span> <span class="post-toc-text">Get a job</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#interview-Questions"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">interview Questions</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Kaggle"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">Kaggle</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Coding"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">Coding</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Tool"><span class="post-toc-number">7.</span> <span class="post-toc-text">Tool</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Jupyter-Notebook"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">Jupyter Notebook</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Questions-to-explore"><span class="post-toc-number">8.</span> <span class="post-toc-text">Questions to explore</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Data-Visualizaton"><span class="post-toc-number">9.</span> <span class="post-toc-text">Data Visualizaton</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Machine-learning-vs-statistical-modeling"><span class="post-toc-number">10.</span> <span class="post-toc-text">Machine learning vs. statistical modeling</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Reinforement-learning"><span class="post-toc-number">11.</span> <span class="post-toc-text">Reinforement learning</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#End-to-end-Process-for-Classification-Problem-Using-Text"><span class="post-toc-number">12.</span> <span class="post-toc-text">End-to-end Process for Classification Problem Using Text</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Exploratory-Data-Analysis-EDA"><span class="post-toc-number">12.1.</span> <span class="post-toc-text">Exploratory Data Analysis (EDA)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Image-Classification-Problem"><span class="post-toc-number">12.1.1.</span> <span class="post-toc-text">Image Classification Problem</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Feature-Engineering"><span class="post-toc-number">12.2.</span> <span class="post-toc-text">Feature Engineering</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Model-induction"><span class="post-toc-number">12.3.</span> <span class="post-toc-text">Model induction</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Model-evaluation"><span class="post-toc-number">12.4.</span> <span class="post-toc-text">Model evaluation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Overfitting"><span class="post-toc-number">12.4.1.</span> <span class="post-toc-text">Overfitting</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Log-Loss"><span class="post-toc-number">13.</span> <span class="post-toc-text">Log Loss</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#From-Exegetic-Analytics"><span class="post-toc-number">13.1.</span> <span class="post-toc-text">From Exegetic Analytics:</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Log-Loss-Function"><span class="post-toc-number">13.1.1.</span> <span class="post-toc-text">Log Loss Function</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Looking-Closer"><span class="post-toc-number">13.1.2.</span> <span class="post-toc-text">Looking Closer</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Code-Support-for-Log-Loss"><span class="post-toc-number">13.1.3.</span> <span class="post-toc-text">Code Support for Log Loss</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#From-scikit-learn"><span class="post-toc-number">13.2.</span> <span class="post-toc-text">From scikit-learn:</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Idea"><span class="post-toc-number">14.</span> <span class="post-toc-text">Idea</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Donating-Data"><span class="post-toc-number">14.1.</span> <span class="post-toc-text">Donating Data</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Donating-Decision-Scientists"><span class="post-toc-number">14.2.</span> <span class="post-toc-text">Donating Decision Scientists</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Donating-Technology-to-Gather-New-Source-of-Data"><span class="post-toc-number">14.3.</span> <span class="post-toc-text">Donating Technology to Gather New Source of Data</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Why-Companies-Should-Do-These"><span class="post-toc-number">14.4.</span> <span class="post-toc-text">Why Companies Should Do These</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Python"><span class="post-toc-number">15.</span> <span class="post-toc-text">Python</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Key-notes-for-Pandas"><span class="post-toc-number">15.1.</span> <span class="post-toc-text">Key notes for Pandas</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#pd-read-csv"><span class="post-toc-number">15.2.</span> <span class="post-toc-text">pd.read_csv</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Context-manager"><span class="post-toc-number">15.3.</span> <span class="post-toc-text">Context manager</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Select-Data"><span class="post-toc-number">15.4.</span> <span class="post-toc-text">Select Data</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Loop-over"><span class="post-toc-number">15.5.</span> <span class="post-toc-text">Loop over</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Dictionaries"><span class="post-toc-number">15.5.1.</span> <span class="post-toc-text">Dictionaries</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#List"><span class="post-toc-number">15.5.2.</span> <span class="post-toc-text">List</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Numpy-array"><span class="post-toc-number">15.5.3.</span> <span class="post-toc-text">Numpy array</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Series"><span class="post-toc-number">15.5.4.</span> <span class="post-toc-text">Series</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DataFrame"><span class="post-toc-number">15.5.5.</span> <span class="post-toc-text">DataFrame</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Hashing"><span class="post-toc-number">15.6.</span> <span class="post-toc-text">Hashing</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Function"><span class="post-toc-number">15.7.</span> <span class="post-toc-text">Function</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Nested-function"><span class="post-toc-number">15.7.1.</span> <span class="post-toc-text">Nested function</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Lambda-functions"><span class="post-toc-number">15.7.2.</span> <span class="post-toc-text">Lambda functions</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Map-and-lambda-functions"><span class="post-toc-number">15.7.2.1.</span> <span class="post-toc-text">Map() and lambda functions</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Filter-and-lambda-functions"><span class="post-toc-number">15.7.2.2.</span> <span class="post-toc-text">Filter() and lambda functions</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Iterators"><span class="post-toc-number">15.7.3.</span> <span class="post-toc-text">Iterators</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Iterables"><span class="post-toc-number">15.7.3.1.</span> <span class="post-toc-text">Iterables</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Writing-an-iterator-to-load-data-in-chunks"><span class="post-toc-number">15.7.3.2.</span> <span class="post-toc-text">Writing an iterator to load data in chunks</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Broadcasting"><span class="post-toc-number">15.8.</span> <span class="post-toc-text">Broadcasting</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Joining-DataFrames"><span class="post-toc-number">15.9.</span> <span class="post-toc-text">Joining DataFrames</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#NLP"><span class="post-toc-number">16.</span> <span class="post-toc-text">NLP</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Data-Cleaning-and-Text-Preprocessing"><span class="post-toc-number">16.1.</span> <span class="post-toc-text">Data Cleaning and Text Preprocessing</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Tokenization"><span class="post-toc-number">16.1.1.</span> <span class="post-toc-text">Tokenization</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Stop-Words"><span class="post-toc-number">16.1.2.</span> <span class="post-toc-text">Stop Words</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#unicode-string"><span class="post-toc-number">16.1.3.</span> <span class="post-toc-text">unicode string</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#other-1"><span class="post-toc-number">16.1.4.</span> <span class="post-toc-text">other</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Extracting-features-from-text-files"><span class="post-toc-number">16.2.</span> <span class="post-toc-text">Extracting features from text files</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Bag-of-Words-Model"><span class="post-toc-number">16.2.1.</span> <span class="post-toc-text">Bag of Words Model</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TF-IDF"><span class="post-toc-number">16.2.2.</span> <span class="post-toc-text">TF-IDF</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Training-a-classifier"><span class="post-toc-number">16.3.</span> <span class="post-toc-text">Training a classifier</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Building-a-pipeline"><span class="post-toc-number">16.4.</span> <span class="post-toc-text">Building a pipeline</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Evaluation-of-the-performance-on-the-test-set"><span class="post-toc-number">16.5.</span> <span class="post-toc-text">Evaluation of the performance on the test set</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Parameter-tuning-using-grid-search"><span class="post-toc-number">16.6.</span> <span class="post-toc-text">Parameter tuning using grid search</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Additional-Reference"><span class="post-toc-number">16.7.</span> <span class="post-toc-text">Additional Reference</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Use-cases"><span class="post-toc-number">17.</span> <span class="post-toc-text">Use cases</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#FS"><span class="post-toc-number">17.1.</span> <span class="post-toc-text">FS:</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Recommend-follow-on-equity-offerings"><span class="post-toc-number">17.1.1.</span> <span class="post-toc-text">Recommend follow-on equity offerings</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Extract-important-data-points-and-clauses-from-legal-documents"><span class="post-toc-number">17.1.2.</span> <span class="post-toc-text">Extract important data points and clauses from legal documents</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#detecting-anomalies-for-fraud"><span class="post-toc-number">17.1.3.</span> <span class="post-toc-text">detecting anomalies for fraud</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#detecting-anomalies-for-fraud-and-cybersecurity"><span class="post-toc-number">17.1.4.</span> <span class="post-toc-text">detecting anomalies for fraud and cybersecurity</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#generating-targeted-trading-strategies-to-share-with-clients"><span class="post-toc-number">17.1.5.</span> <span class="post-toc-text">generating targeted trading strategies to share with clients</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#optimizing-clientservicing-channels"><span class="post-toc-number">17.1.6.</span> <span class="post-toc-text">optimizing clientservicing channels</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#respond-to-employee-technology-service-desk-requests-through-a-natural-language-interface"><span class="post-toc-number">17.1.7.</span> <span class="post-toc-text">respond to employee technology service desk requests through a natural language interface</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Industry-News"><span class="post-toc-number">18.</span> <span class="post-toc-text">Industry News</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Deep-learning"><span class="post-toc-number">18.1.</span> <span class="post-toc-text">Deep learning</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Career"><span class="post-toc-number">19.</span> <span class="post-toc-text">Career</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#How-to-become-machine-learning-researcher"><span class="post-toc-number">19.1.</span> <span class="post-toc-text">How to become machine learning researcher</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Other-advice"><span class="post-toc-number">19.2.</span> <span class="post-toc-text">Other advice</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Interview-Questions"><span class="post-toc-number">19.3.</span> <span class="post-toc-text">Interview Questions</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Why-data-science-is-science"><span class="post-toc-number">19.3.1.</span> <span class="post-toc-text">Why data science is science?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Why-you’re-suitable-for-this-job"><span class="post-toc-number">19.3.2.</span> <span class="post-toc-text">Why you’re suitable for this job</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#My-strength-comparatively"><span class="post-toc-number">19.3.3.</span> <span class="post-toc-text">My strength comparatively</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Terms-I-don’t-understand-yet"><span class="post-toc-number">20.</span> <span class="post-toc-text">Terms I don’t understand yet</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Bookmark"><span class="post-toc-number">21.</span> <span class="post-toc-text">Bookmark</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Fun-facts"><span class="post-toc-number">22.</span> <span class="post-toc-text">Fun facts</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#challenges-of-big-data-and-machine-learning"><span class="post-toc-number">23.</span> <span class="post-toc-text">challenges of big data and machine learning</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-data-science"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Data Science</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-04-24 22:40:05" datetime="2017-04-24T14:40:05.000Z"  itemprop="datePublished">2017-04-24</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="To-be-categorized"><a href="#To-be-categorized" class="headerlink" title="To be categorized"></a>To be categorized</h1><p><a href="https://docs.google.com/document/d/1Bf1jEkKlCYJJdUoyBSROxPS5FsZlAaZ8cZ35GsHhpYU/pub?embedded=true" target="_blank" rel="external">Udacity Career Development resources</a></p>
+<h1 id="Cheatsheet"><a href="#Cheatsheet" class="headerlink" title="Cheatsheet"></a>Cheatsheet</h1><p><a href="https://startupsventurecapital.com/essential-cheat-sheets-for-machine-learning-and-deep-learning-researchers-efb6a8ebd2e5" target="_blank" rel="external">Essential Cheat Sheets for Machine Learning and Deep Learning Engineers</a></p>
+<h1 id="Notes-from-ND009"><a href="#Notes-from-ND009" class="headerlink" title="Notes from ND009"></a>Notes from ND009</h1><h2 id="algorithm-mentioned"><a href="#algorithm-mentioned" class="headerlink" title="algorithm mentioned"></a>algorithm mentioned</h2><h3 id="supervised-learning"><a href="#supervised-learning" class="headerlink" title="supervised learning"></a>supervised learning</h3><ul>
+<li>decision trees</li>
+<li>naive Bayes</li>
+<li>Gradient descent (“will be used extensively”)</li>
+<li>linear regression<ul>
+<li>(the procedure of finding the best line is actually a gradient descent by moving the direction where the error is reduced)</li>
+<li>the procedure is called “least square” (minimizing the error, in square to handle the negative)</li>
+</ul>
+</li>
+<li>logistic regression (gradient descent with log loss as error function)</li>
+<li>support vector machine (<em>what is the difference compared to logistic regression?</em>)</li>
+<li>neural network</li>
+<li>kernel trick - well used in support vector machine (so not an algorithms?) (find a function that separate the 2 target variables and define it as an additional feature)</li>
+</ul>
+<p>I should be able to explain the algorithms and know the pros and cons for each, and what are their parameters</p>
+<p>algorithms mentioned by <a href="https://www.linkedin.com/jobs/view/356253635/" target="_blank" rel="external">Accenture Finance &amp; Risk Data Scientist Consultant</a>:<br>k-NN, Naive Bayes, SVM, Random Forests<br>so at least need to understand these</p>
+<p>logistic regression vs SVM</p>
+<ul>
+<li>logistic regression considers all the data points</li>
+<li>SVM just consider the one closest to the boundary</li>
+</ul>
+<h3 id="unsupervised-learning"><a href="#unsupervised-learning" class="headerlink" title="unsupervised learning"></a>unsupervised learning</h3><ul>
+<li>k-mean clustering (limitation, need to know the number of cluster in advance)</li>
+<li>hierarchical clustering (limitation, need to predefine the max distance which we stop grouping)</li>
+</ul>
+<h3 id="other"><a href="#other" class="headerlink" title="other"></a>other</h3><p>one-line definition of supervised learning:<br>feeding a labelled dataset into the model, that it can learn from, to make future predictions</p>
+<h3 id="a-introduction-of-Naive-Bayes-Theorem"><a href="#a-introduction-of-Naive-Bayes-Theorem" class="headerlink" title="a introduction of Naive Bayes Theorem"></a>a introduction of Naive Bayes Theorem</h3><blockquote>
+<p>Bayes theorem is one of the earliest probabilistic inference algorithms developed by Reverend Bayes (which he used to try and infer the existence of God no less) and still performs extremely well for certain use cases.</p>
+<p>It’s best to understand this theorem using an example. Let’s say you are a member of the Secret Service and you have been deployed to protect the Democratic presidential nominee during one of his/her campaign speeches. Being a public event that is open to all, your job is not easy and you have to be on the constant lookout for threats. So one place to start is to put a certain threat-factor for each person. So based on the features of an individual, like the age, sex, and other smaller factors like is the person carrying a bag?, does the person look nervous? etc. you can make a judgement call as to if that person is viable threat.</p>
+<p>If an individual ticks all the boxes up to a level where it crosses a threshold of doubt in your mind, you can take action and remove that person from the vicinity. The Bayes theorem works in the same way as we are computing the probability of an event(a person being a threat) based on the probabilities of certain related events(age, sex, presence of bag or not, nervousness etc. of the person).</p>
+<p>One thing to consider is the independence of these features amongst each other. For example if a child looks nervous at the event then the likelihood of that person being a threat is not as much as say if it was a grown man who was nervous. To break this down a bit further, here there are two features we are considering, age AND nervousness. Say we look at these features individually, we could design a model that flags ALL persons that are nervous as potential threats. However, it is likely that we will have a lot of false positives as there is a strong chance that minors present at the event will be nervous. Hence by considering the age of a person along with the ‘nervousness’ feature we would definitely get a more accurate result as to who are potential threats and who aren’t.</p>
+<p>This is the ‘Naive’ bit of the theorem where it considers each feature to be independant of each other which may not always be the case and hence that can affect the final judgement.</p>
+<p>In short, the Bayes theorem calculates the probability of a certain event happening(in our case, a message being spam) based on the joint probabilistic distributions of certain other events(in our case, a message being classified as spam). We will dive into the workings of the Bayes theorem later in the mission, but first, let us understand the data we are going to work with.</p>
+</blockquote>
+<h3 id="a-introduction-of-bag-of-words"><a href="#a-introduction-of-bag-of-words" class="headerlink" title="a introduction of bag of words"></a>a introduction of bag of words</h3><blockquote>
+<p>What we have here in our data set is a large collection of text data (5,572 rows of data). Most ML algorithms rely on numerical data to be fed into them as input, and email/sms messages are usually text heavy.</p>
+<p>Here we’d like to introduce the Bag of Words(BoW) concept which is a term used to specify the problems that have a ‘bag of words’ or a collection of text data that needs to be worked with. The basic idea of BoW is to take a piece of text and count the frequency of the words in that text. It is important to note that the BoW concept treats each word individually and the order in which the words occur does not matter.</p>
+<p>Using a process which we will go through now, we can covert a collection of documents to a matrix, with each document being a row and each word(token) being the column, and the corresponding (row,column) values being the frequency of occurrance of each word or token in that document.</p>
+<p>Lets break this down and see how we can do this conversion using a small set of documents.</p>
+<p>To handle this, we will be using sklearns<br><a href="http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer" target="_blank" rel="external">count vectorizer</a> method which does the following:</p>
+<ul>
+<li>It tokenizes the string(separates the string into individual words) and gives an integer ID to each token.</li>
+<li>It counts the occurrance of each of those tokens.</li>
+</ul>
+<p><strong> Please Note: </strong></p>
+<ul>
+<li><p>The CountVectorizer method automatically converts all tokenized words to their lower case form so that it does not treat words like ‘He’ and ‘he’ differently. It does this using the <code>lowercase</code> parameter which is by default set to <code>True</code>.</p>
+</li>
+<li><p>It also ignores all punctuation so that words followed by a punctuation mark (for example: ‘hello!’) are not treated differently than the same words not prefixed or suffixed by a punctuation mark (for example: ‘hello’). It does this using the <code>token_pattern</code> parameter which has a default regular expression which selects tokens of 2 or more alphanumeric characters.</p>
+</li>
+<li><p>The third parameter to take note of is the <code>stop_words</code> parameter. Stop words refer to the most commonly used words in a language. They include words like ‘am’, ‘an’, ‘and’, ‘the’ etc. By setting this parameter value to <code>english</code>, CountVectorizer will automatically ignore all words(from our input text) that are found in the built in list of english stop words in scikit-learn. This is extremely helpful as stop words can skew our calculations when we are trying to find certain key words that are indicative of spam.</p>
+</li>
+</ul>
+<p>We will dive into the application of each of these into our model in a later step, but for now it is important to be aware of such preprocessing techniques available to us when dealing with textual data.</p>
+</blockquote>
+<p>Contain the implementation of the Bag of Words process from scratch</p>
+<p>Potential issues of Bags of Words and the solutions:</p>
+<blockquote>
+<p>One potential issue that can arise from using this method out of the box is the fact that if our dataset of text is extremely large(say if we have a large collection of news articles or email data), there will be certain values that are more common that others simply due to the structure of the language itself. So for example words like ‘is’, ‘the’, ‘an’, pronouns, grammatical contructs etc could skew our matrix and affect our analyis.</p>
+<p>There are a couple of ways to mitigate this. One way is to use the <code>stop_words</code> parameter and set its value to <code>english</code>. This will automatically ignore all words(from our input text) that are found in a built in list of English stop words in scikit-learn.</p>
+<p>Another way of mitigating this is by using the <a href="http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html#sklearn.feature_extraction.text.TfidfVectorizer" target="_blank" rel="external">tfidf</a> method. This method is out of scope for the context of this lesson.</p>
+</blockquote>
+<p>What does the term ‘Naive’ in ‘Naive Bayes’ mean?</p>
+<blockquote>
+<p>The term ‘Naive’ in Naive Bayes comes from the fact that the algorithm considers the features that it is using to make the predictions to be independent of each other, which may not always be the case. So in our Diabetes example, we are considering only one feature, that is the test result. Say we added another feature, ‘exercise’. Let’s say this feature has a binary value of <code>0</code> and <code>1</code>, where the former signifies that the individual exercises less than or equal to 2 days a week and the latter signifies that the individual exercises greater than or equal to 3 days a week. If we had to use both of these features, namely the test result and the value of the ‘exercise’ feature, to compute our final probabilities, Bayes’ theorem would fail. Naive Bayes’ is an extension of Bayes’ theorem that assumes that all the features are independent of each other.</p>
+</blockquote>
+<p>Naive Bayes: multinomial vs Gaussian</p>
+<blockquote>
+<p>Specifically, we will be using the multinomial Naive Bayes implementation. This particular classifier is suitable for classification with discrete features (such as in our case, word counts for text classification). It takes in integer word counts as its input. On the other hand Gaussian Naive Bayes is better suited for continuous data as it assumes that the input data has a Gaussian(normal) distribution.</p>
+</blockquote>
+<p>Model evaluation:</p>
+<blockquote>
+<p><strong> Accuracy </strong> measures how often the classifier makes the correct prediction. It’s the ratio of the number of correct predictions to the total number of predictions (the number of test data points).</p>
+<p><strong> Precision </strong> tells us what proportion of messages we classified as spam, actually were spam.<br>It is a ratio of true positives(words classified as spam, and which are actually spam) to all positives(all words classified as spam, irrespective of whether that was the correct classification), in other words it is the ratio of</p>
+<p><code>[True Positives/(True Positives + False Positives)]</code></p>
+<p><strong> Recall(sensitivity)</strong> tells us what proportion of messages that actually were spam were classified by us as spam.<br>It is a ratio of true positives(words classified as spam, and which are actually spam) to all the words that were actually spam, in other words it is the ratio of</p>
+<p><code>[True Positives/(True Positives + False Negatives)]</code></p>
+<p>For classification problems that are skewed in their classification distributions like in our case, for example if we had a 100 text messages and only 2 were spam and the rest 98 weren’t, accuracy by itself is not a very good metric. We could classify 90 messages as not spam(including the 2 that were spam but we classify them as not spam, hence they would be false negatives) and 10 as spam(all 10 false positives) and still get a reasonably good accuracy score. For such cases, precision and recall come in very handy. These two metrics can be combined to get the F1 score, which is weighted average of the precision and recall scores. This score can range from 0 to 1, with 1 being the best possible F1 score.<br>We will be using all 4 metrics to make sure our model does well. For all 4 metrics whose values can range from 0 to 1, having a score as close to 1 as possible is a good indicator of how well our model is doing.</p>
+<p>We will be using all 4 metrics to make sure our model does well. For all 4 metrics whose values can range from 0 to 1, having a score as close to 1 as possible is a good indicator of how well our model is doing.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&gt; <span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> accuracy_score, precision_score, recall_score, f1_score</div><div class="line">&gt; print(<span class="string">'Accuracy score: '</span>, format(accuracy_score(y_test, predictions)))</div><div class="line">&gt; print(<span class="string">'Precision score: '</span>, format(precision_score(y_test, predictions)))</div><div class="line">&gt; print(<span class="string">'Recall score: '</span>, format(recall_score(y_test, predictions)))</div><div class="line">&gt; print(<span class="string">'F1 score: '</span>, format(f1_score(y_test, predictions)))</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<p>Advantage of Naive Bayes</p>
+<blockquote>
+<p>One of the major advantages that Naive Bayes has over other classification algorithms is its ability to handle an extremely large number of features. In our case, each word is treated as a feature and there are thousands of different words. Also, it performs well even with the presence of irrelevant features and is relatively unaffected by them. The other major advantage it has is its relative simplicity. Naive Bayes’ works well right out of the box and tuning it’s parameters is rarely ever necessary, except usually in cases where the distribution of the data is known. It rarely ever overfits the data. Another important advantage is that its model training and prediction times are very fast for the amount of data it can handle. All in all, Naive Bayes’ really is a gem of an algorithm!</p>
+</blockquote>
+<p>prerequisite statistics courses:<br><a href="https://www.udacity.com/course/intro-to-inferential-statistics--ud201" target="_blank" rel="external">https://www.udacity.com/course/intro-to-inferential-statistics--ud201</a><br><a href="https://www.udacity.com/course/intro-to-descriptive-statistics--ud827" target="_blank" rel="external">https://www.udacity.com/course/intro-to-descriptive-statistics--ud827</a></p>
+<p>median is better than mean as median is not affected severely by outliers.</p>
+<p>Bessel’s correction is the use of n − 1 instead of n in the formula for the sample variance and sample standard deviation, where n is the number of observations in a sample. This method corrects the bias in the estimation of the population variance (the sample variance and sample standard deviation tends to be higher if divided by n as the samples will probably nearly the mean). It also partially corrects the bias in the estimation of the population standard deviation. However, the correction often increases the mean squared error in these estimations.</p>
+<p>Label Encoder vs One-hot Encoder:</p>
+<p>One thing to keep in mind when encoding data is the fact that you do not want to skew your analysis because of the numbers that are assigned to your categories. For example, in the above example, slim is assigned a value 2 and obese a value 1. This is not to say that the intention here is to have slim be a value that is empirically twice is likely to affect your analysis as compared to obese. In such situations it is better to one-hot encode your data as all categories are assigned a 0 or a 1 value thereby removing any unwanted biases that may creep in if you simply label encode your data.</p>
+<p>If we have concerns about class imbalance, then we can use the StratifiedKFold() class instead. Where KFold() assigns points to folds without attention to output class, StratifiedKFold() assigns data points to folds so that each fold has approximately the same number of data points of each output class. This is most useful for when we have imbalanced numbers of data points in your outcome classes (e.g. one is rare compared to the others).</p>
+<p>K-fold cross-validation training technique is a cross-validation training technique which randomly partition the original sample into k equal sized subsamples and of the k subsamples, a single subsample is retained as the validation data for testing the model, and the remaining k − 1 subsamples are used as training data. The cross-validation process is then repeated k times (the folds), with each of the k subsamples used exactly once as the validation data. The k results from the folds can then be averaged to produce a single estimation.<br>The benefit this technique provides for grid search when optimizing a model is that is that all observations are used for both training and validation, and each observation is used for validation exactly once and thus it matters less how the data gets divided and the variance of the resulting estimate is reduced as k is increased.</p>
+<p>GridSearchCV: Each of the combination in the grid is used to train an SVM, and the performance is then assessed using cross-validation.</p>
+<p>Evaluation:<br>Accuracy = no. of all data points labeled correctly divided by all data points<br>Shortcoming:</p>
+<ul>
+<li>not ideal for skewed classes</li>
+<li>not meet your need if you want to err on one label (err on the side of guilty as all the selected person will be further investigated (not putting to jail directly))</li>
+</ul>
+<p>Precision: True Positive / (True Positive + False Positive). Out of all the items labeled as positive, how many truly belong to the positive class.<br>Somehow you take a few shots and if most of them got their target (relevant documents) then you have a high precision, regardless of how many shots you fired (number of documents that got retrieved).</p>
+<p>Recall: True Positive / (True Positive + False Negative). Out of all the items that are truly positive, how many were correctly classified as positive. Or simply, how many positive items were ‘recalled’ from the dataset.<br>Recall is the fraction of the documents that are relevant to the query that are successfully retrieved, hence its name (in English recall = the action of remembering something).</p>
+<p>Confusion Matrix</p>
+<p>The F1 score can be interpreted as a weighted average of the precision and recall, where an F1 score reaches its best value at 1 and worst at 0:<br>F1 = 2 <em> (precision </em> recall) / (precision + recall)</p>
+<p>Popular regression metrics are:</p>
+<p>Mean Absolute Error<br>One way to measure error is by using absolute error to find the predicted distance from the true value. The mean absolute error takes the total absolute error of each example and averages the error based on the number of data points. By adding up all the absolute values of errors of a model we can avoid canceling out errors from being too high or below the true values and get an overall error metric to evaluate the model on.</p>
+<p>Mean Squared Error<br>Mean squared is the most common metric to measure model performance. In contrast with absolute error, the residual error (the difference between predicted and the true value) is squared.</p>
+<p>Some benefits of squaring the residual error is that error terms are positive, it emphasizes larger errors over smaller errors, and is differentiable. Being differentiable allows us to use calculus to find minimum or maximum values, often resulting in being more computationally efficient.</p>
+<p>In addition to error metrics, scikit-learn contains two scoring metrics which scale continuously from 0 to 1, with values of 0 being bad and 1 being perfect performance.</p>
+<p>These are the metrics that you’ll use in the project at the end of the course. They have the advantage of looking similar to classification metrics, with numbers closer to 1.0 being good scores and bad scores tending to be near 0.</p>
+<p>One of these is the R2 score, which computes the coefficient of determination of predictions for true values. This is the default scoring method for regression learners in scikit-learn.</p>
+<p>The other is the explained variance score.</p>
+<p>To learn more about bias and variance, we recommend this <a href="http://scott.fortmann-roe.com/docs/BiasVariance.html" target="_blank" rel="external">essay</a> by Scott Fortmann-Roe.</p>
+<p>Curse of Dimensionality: As the number of features or dimensions grows, the amount of data we need to generalizes accurately grows exponentially.</p>
+<p>Regression:<br><a href="https://www.mathsisfun.com/algebra/polynomials.html" target="_blank" rel="external">https://www.mathsisfun.com/algebra/polynomials.html</a><br>Besides parametric (using a polynomial) can also be non-parametric (data-centric approach / instance-based approach, e.g. kNN)</p>
+<p>Why is Deep Learning taking off?</p>
+<p>The loss function computes the error for a single training example, the cost function is the average of the loss function of the entire training set.</p>
+<p>Derivative is just slope.</p>
+<p>Vectorization is key in the deep learning era.</p>
+<p>Neural network programming guideline</p>
+<ul>
+<li>whenever possible, avoid explicit for-loops<br>-</li>
+</ul>
+<p>Use<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a = np.random.randn(<span class="number">5</span>,<span class="number">1</span>)</div></pre></td></tr></table></figure></p>
+<p>instead of<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a = np.random.randn(<span class="number">5</span>)</div></pre></td></tr></table></figure></p>
+<p>The 2nd one creates a “rank 1 array”.</p>
+<p>“gradient (also called the slope or derivative) of the sigmoid function with respect to its input x”<br>So gradient = slope = derivative of a function</p>
+<p>What you need to remember:</p>
+<ul>
+<li>np.exp(x) works for any np.array x and applies the exponential function to every coordinate</li>
+<li>the sigmoid function and its gradient</li>
+<li>image2vector is commonly used in deep learning</li>
+<li>np.reshape is widely used. In the future, you’ll see that keeping your matrix/vector dimensions straight will go toward eliminating a lot of bugs.</li>
+<li>numpy has efficient built-in functions</li>
+<li>broadcasting is extremely useful</li>
+</ul>
+<p>What to remember:</p>
+<ul>
+<li>Vectorization is very important in deep learning. It provides computational efficiency and clarity.</li>
+<li>You have reviewed the L1 and L2 loss.</li>
+<li>You are familiar with many numpy functions such as np.sum, np.dot, np.multiply, np.maximum, etc…</li>
+</ul>
+<p>What you need to remember:<br>Common steps for pre-processing a new dataset are:</p>
+<ul>
+<li>Figure out the dimensions and shapes of the problem (m_train, m_test, num_px, …)</li>
+<li>Reshape the datasets such that each example is now a vector of size (num_px <em> num_px </em> 3, 1)</li>
+<li>“Standardize” the data</li>
+</ul>
+<blockquote>
+<h1 id="FORWARD-PROPAGATION-FROM-X-TO-COST"><a href="#FORWARD-PROPAGATION-FROM-X-TO-COST" class="headerlink" title="FORWARD PROPAGATION (FROM X TO COST)"></a>FORWARD PROPAGATION (FROM X TO COST)</h1><h1 id="BACKWARD-PROPAGATION-TO-FIND-GRAD"><a href="#BACKWARD-PROPAGATION-TO-FIND-GRAD" class="headerlink" title="BACKWARD PROPAGATION (TO FIND GRAD)"></a>BACKWARD PROPAGATION (TO FIND GRAD)</h1><p>A = None                                     # compute activation<br>So A is the activation?</p>
+</blockquote>
+<h1 id="Get-a-job"><a href="#Get-a-job" class="headerlink" title="Get a job"></a>Get a job</h1><h2 id="interview-Questions"><a href="#interview-Questions" class="headerlink" title="interview Questions"></a>interview Questions</h2><p>作者：晓宇我喜欢你<br>链接：<a href="https://www.zhihu.com/question/23259302/answer/24300412" target="_blank" rel="external">https://www.zhihu.com/question/23259302/answer/24300412</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>我面試過5-6家互聯網公司的數據挖掘和分析、機器學習相關職位的工程師。被問到下面一些問題。SVM的原理，SVM裡面的核K-means，如何用hadoop實現k-meansnaive bayes和logistic regression的區別LDA的原理和推導做廣告點擊率預測，用哪些數據什麼算法推薦系統的算法中最近鄰和矩陣分解各自適用場景用戶流失率預測怎麼做（遊戲公司的數據挖掘都喜歡問這個）一個遊戲的設計過程中該收集什麼數據如何從登陸日誌中挖掘儘可能多的信息這些問題我回答的情況，分幾種。一種是在面試官的提示下，算是勉強完成了答案。一種是在面試官的提示下，答了一點但是答得不夠好。一種是面試官不提示也沒有反饋，我回答了但是我不知道回答得怎樣。我非常後悔的一點是我現在才想起來總結。有一個題是遊戲玩家流失率預測，我被問過兩次。但是每次我都說是個分類問題。最近我突然想起來去網上查了下，有兩個點，數據不平衡問題和時間序列分析。我網上查到是一個大學教授和人人遊戲合作的課題。我然後查了下這個老師的publication。沒發現相關的論文。可能公司不讓發表吧。這些問題的特點是很基礎很簡單，因為實際中很少用複雜的算法，複雜的算法不好控制，而且理論要求高。另一個特點是注重考查實際工程能力，我經常被問到自己實現了哪些算法。還有的問題很契合實際。我覺得如果現在再給我準備的機會。我會準備下面幾點。首先是計算機基礎知識和算法，這些都是會正常考察的。有些公司考的少，有些公司正常考察。針對機器學習這部分，需要理論紮實，還需要自己動手實現代碼。另外hadoop，mpi，最近比較火的spark，應該都是加分項。另一個是接觸下實際的數據分析系統。我在學校裡面看的論文，都是講算法的多，講應用系統的少。這個可以靠之前的實習，也可以看些比較實用的論文。</p>
+<h2 id="Kaggle"><a href="#Kaggle" class="headerlink" title="Kaggle"></a>Kaggle</h2><p><a href="https://elitedatascience.com/beginner-kaggle" target="_blank" rel="external">The Beginner’s Guide to Kaggle</a></p>
+<h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p><a href="https://leetcode.com/" target="_blank" rel="external">LeetCode</a></p>
+<h1 id="Tool"><a href="#Tool" class="headerlink" title="Tool"></a>Tool</h1><h2 id="Jupyter-Notebook"><a href="#Jupyter-Notebook" class="headerlink" title="Jupyter Notebook"></a>Jupyter Notebook</h2><p><a href="https://www.douban.com/review/7890354/" target="_blank" rel="external">Useful extension</a></p>
+<h1 id="Questions-to-explore"><a href="#Questions-to-explore" class="headerlink" title="Questions to explore"></a>Questions to explore</h1><p>By <a href="https://www.kaggle.com/anokas/quora-question-pairs/data-analysis-xgboost-starter-0-35460-lb" target="_blank" rel="external">anokas</a>:</p>
+<blockquote>
+<p>I’ll be using a naive method for splitting words (splitting on spaces instead of using a serious tokenizer)…</p>
+</blockquote>
+<p>What is a tokenizer and how it works?</p>
+<blockquote>
+<p>I am using the AUC metric since it is unaffected by scaling and similar, so it is a good metric for testing the predictive power of individual features.</p>
+</blockquote>
+<p>Why AUC metric is unaffected by scaling?</p>
+<blockquote>
+<p>[Log Loss] looks at the probabilities themselves and not just the order of the predictions like AUC</p>
+</blockquote>
+<p>Revisit why AUC just looks at the order of the predictions</p>
+<h1 id="Data-Visualizaton"><a href="#Data-Visualizaton" class="headerlink" title="Data Visualizaton"></a>Data Visualizaton</h1><p><a href="http://ft-interactive.github.io/visual-vocabulary/" target="_blank" rel="external">Visual Vocabulary</a></p>
+<p><a href="https://tinlizzie.org/histograms/" target="_blank" rel="external">Histograms is very sensitive to parameter choices</a> - key takeaways:</p>
+<ul>
+<li>it can be used to mislead people with carefully chosen parameters, including bin offset, bin width</li>
+</ul>
+<h1 id="Machine-learning-vs-statistical-modeling"><a href="#Machine-learning-vs-statistical-modeling" class="headerlink" title="Machine learning vs. statistical modeling"></a>Machine learning vs. statistical modeling</h1><blockquote>
+<p>Machine learning is a subfield of computer science and is closely related to statistics. Both statistics and machine learning have the aim of learning from data and they share many concepts and mathematical tools.</p>
+<p>But, unlike statistics, machine learning tends to emphasise building software to make predictions, is often applied to larger datasets, and the techniques used require fewer assumptions about the data or how it was collected. There’s more detail on the differences <a href="https://www.analyticsvidhya.com/blog/2015/07/difference-machine-learning-statistical-modeling/" target="_blank" rel="external">here</a>.</p>
+</blockquote>
+<h1 id="Reinforement-learning"><a href="#Reinforement-learning" class="headerlink" title="Reinforement learning"></a>Reinforement learning</h1><p><a href="https://80000hours.org/career-reviews/machine-learning-phd" target="_blank" rel="external">80000 Hours</a>:</p>
+<blockquote>
+<p>Reinforcement learning is important because it’s a promising approach to creating artificial intelligence that could perform well at multiple different tasks rather than the very narrow applicability that most machine learning systems currently have.</p>
+</blockquote>
+<h1 id="End-to-end-Process-for-Classification-Problem-Using-Text"><a href="#End-to-end-Process-for-Classification-Problem-Using-Text" class="headerlink" title="End-to-end Process for Classification Problem Using Text"></a>End-to-end Process for Classification Problem Using Text</h1><p>With refernce to the <a href="https://www.kaggle.com/anokas/quora-question-pairs/data-analysis-xgboost-starter-0-35460-lb" target="_blank" rel="external">kernel by anokas for Quora Question Pair competitions</a></p>
+<h2 id="Exploratory-Data-Analysis-EDA"><a href="#Exploratory-Data-Analysis-EDA" class="headerlink" title="Exploratory Data Analysis (EDA)"></a>Exploratory Data Analysis (EDA)</h2><ul>
+<li>File sizes: compare the file sizes of training set and test test.</li>
+<li>Print the head of both training and test set to observe the sample values of each field.</li>
+<li>Plot some graphs to explore, especially histogram of character count and word count.</li>
+<li>Plot a word cloud to find out what are the most common words.</li>
+<li>Semantic Analysis: Check the usage of different punctuations in dataset.</li>
+</ul>
+<h3 id="Image-Classification-Problem"><a href="#Image-Classification-Problem" class="headerlink" title="Image Classification Problem"></a>Image Classification Problem</h3><p>When handling image classification problems, try to answer the following questions:</p>
+<ul>
+<li>What are the distributions of image types?</li>
+<li>Are the images in the same dimension?</li>
+</ul>
+<h2 id="Feature-Engineering"><a href="#Feature-Engineering" class="headerlink" title="Feature Engineering"></a>Feature Engineering</h2><ul>
+<li>used TF-IDF (term-frequency-inverse-document-frequency), i.e. weigh the terms by how uncommon they are, meaning that we care more about rare words existing in both questions than common one. (<a href="http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html" target="_blank" rel="external">TfidfVectorizer</a>)</li>
+</ul>
+<h2 id="Model-induction"><a href="#Model-induction" class="headerlink" title="Model induction"></a>Model induction</h2><ul>
+<li>Data rebalancing: “…since we have 37% positive class in our training data, and only 17% in the test data. By re-balancing the data so our training set has 17% positives, we can ensure that XGBoost outputs probabilities that will better match the data on the leaderboard…”</li>
+<li>run XGBoost</li>
+</ul>
+<h2 id="Model-evaluation"><a href="#Model-evaluation" class="headerlink" title="Model evaluation"></a>Model evaluation</h2><h3 id="Overfitting"><a href="#Overfitting" class="headerlink" title="Overfitting"></a>Overfitting</h3><p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1622921/#S1title" target="_blank" rel="external">The Hazards of Predicting Divorce Without Crossvalidation</a>:</p>
+<blockquote>
+<p>Overfitting can cause extreme overinflation of predictive powers, especially when oversampled extreme groups and small samples are used, as was the case with <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1622921/#R12" target="_blank" rel="external">Gottman et al. (1998; n = 60 couples for the prediction analyses)</a>…</p>
+</blockquote>
+<h1 id="Log-Loss"><a href="#Log-Loss" class="headerlink" title="Log Loss"></a>Log Loss</h1><h2 id="From-Exegetic-Analytics"><a href="#From-Exegetic-Analytics" class="headerlink" title="From Exegetic Analytics:"></a>From <a href="http://www.exegetic.biz/blog/2015/12/making-sense-logarithmic-loss/" target="_blank" rel="external">Exegetic Analytics</a>:</h2><p>Logarithmic Loss, or simply Log Loss, is a <a href="https://en.wikipedia.org/wiki/Loss_functions_for_classification" target="_blank" rel="external">classification loss function</a> often used as an evaluation metric in <a href="https://www.kaggle.com/wiki/MultiClassLogLoss" target="_blank" rel="external">kaggle</a> competitions. Since success in these competitions hinges on effectively minimising the Log Loss, it makes sense to have some understanding of how this metric is calculated and how it should be interpreted.</p>
+<p>Log Loss quantifies the accuracy of a classifier by penalising false classifications. Minimising the Log Loss is basically equivalent to maximising the accuracy of the classifier, but there is a subtle twist which we’ll get to in a moment.</p>
+<p>In order to calculate Log Loss the classifier must assign a probability to each class rather than simply yielding the most likely class. Mathematically Log Loss is defined as</p>
+<p>$$\frac{1}{N} \sum_{i=1}^N \sum_{j=1}^M y_{ij} \log \, p_{ij}$$</p>
+<p>where N is the number of samples or instances, M is the number of possible labels, $y_{ij}$ is a binary indicator of whether or not label $j$ is the correct classification for instance $i$, and $p_{ij}$ is the model probability of assigning label $j$ to instance $i$. A perfect classifier would have a Log Loss of precisely zero. Less ideal classifiers have progressively larger values of Log Loss. If there are only two classes then the expression above simplifies to</p>
+<p>$$\frac{1}{N} \sum_{i=1}^N [y_{i} \log \, p_{i} + (1 - y_{i}) \log \, (1 - p_{i})]$$</p>
+<p>Note that for each instance only the term for the correct class actually contributes to the sum.</p>
+<h3 id="Log-Loss-Function"><a href="#Log-Loss-Function" class="headerlink" title="Log Loss Function"></a>Log Loss Function</h3><p>Let’s consider a simple implementation of a Log Loss function:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt; LogLossBinary = <span class="keyword">function</span>(actual, predicted, eps = <span class="number">1e-15</span>) &#123;</div><div class="line">+ predicted = pmin(pmax(predicted, eps), <span class="number">1</span>-eps)</div><div class="line">+ - (sum(actual * log(predicted) + (<span class="number">1</span> - actual) * log(<span class="number">1</span> - predicted))) / length(actual)</div><div class="line">+ &#125;</div></pre></td></tr></table></figure>
+<p>Suppose that we are training a binary classifier and consider an instance which is known to belong to the target class. We’ll have a look at the effect of various predictions for class membership probability.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&gt; LogLossBinary(<span class="number">1</span>, c(<span class="number">0.5</span>))  </div><div class="line">[<span class="number">1</span>] <span class="number">0.69315</span>  </div><div class="line">&gt; LogLossBinary(<span class="number">1</span>, c(<span class="number">0.9</span>))  </div><div class="line">[<span class="number">1</span>] <span class="number">0.10536</span>  </div><div class="line">&gt; LogLossBinary(<span class="number">1</span>, c(<span class="number">0.1</span>))  </div><div class="line">[<span class="number">1</span>] <span class="number">2.3026</span></div></pre></td></tr></table></figure>
+<p>In the first case the classification is neutral: it assigns equal probability to both classes, resulting in a Log Loss of 0.69315. In the second case the classifier is relatively confident in the first class. Since this is the correct classification the Log Loss is reduced to 0.10536. The third case is an equally confident classification, but this time for the wrong class. The resulting Log Loss escalates to 2.3026. Relative to the neutral classification, being confident in the wrong class resulted in a far greater change in Log Loss. Obviously the amount by which Log Loss can decrease is constrained, while increases are unbounded.</p>
+<h3 id="Looking-Closer"><a href="#Looking-Closer" class="headerlink" title="Looking Closer"></a>Looking Closer</h3><p>Let’s take a closer look at this relationship. The plot below shows the Log Loss contribution from a single positive instance where the predicted probability ranges from 0 (the completely wrong prediction) to 1 (the correct prediction). It’s apparent from the gentle downward slope towards the right that the Log Loss gradually declines as the predicted probability improves. Moving in the opposite direction though, the Log Loss ramps up very rapidly as the predicted probability approaches 0. That’s the twist I mentioned earlier.</p>
+<img src="/2017/04/24/data-science/log-loss-curve.png" alt="log-loss-curve.png" title="">
+<p><br> Log Loss heavily penalises classifiers that are confident about an incorrect classification. For example, if for a particular observation, the classifier assigns a very small probability to the correct class then the corresponding contribution to the Log Loss will be very large indeed. Naturally this is going to have a significant impact on the overall Log Loss for the classifier. The bottom line is that it’s better to be somewhat wrong than emphatically wrong. Of course it’s always better to be completely right, but that is seldom achievable in practice! There are at least two approaches to dealing with poor classifications:</p>
+<ol>
+<li>Examine the problematic observations relative to the full data set. Are they simply outliers? In this case, remove them from the data and re-train the classifier.</li>
+<li>Consider smoothing the predicted probabilities using, for example, <a href="https://en.wikipedia.org/wiki/Additive_smoothing" target="_blank" rel="external">Laplace Smoothing</a>. This will result in a less “certain” classifier and might improve the overall Log Loss.</li>
+</ol>
+<h3 id="Code-Support-for-Log-Loss"><a href="#Code-Support-for-Log-Loss" class="headerlink" title="Code Support for Log Loss"></a>Code Support for Log Loss</h3><p>Using Log Loss in your models is relatively simple. <a href="https://github.com/dmlc/xgboost" target="_blank" rel="external">XGBoost</a> has <code>logloss</code> and <code>mlogloss</code> options for the <code>eval_metric</code> parameter, which allow you to optimise your model with respect to binary and multiclass Log Loss respectively. Both metrics are available in <a href="http://topepo.github.io/caret/index.html" target="_blank" rel="external">caret</a>’s <code>train()</code> function as well. The <a href="https://cran.r-project.org/web/packages/Metrics/index.html" target="_blank" rel="external">Metrics</a> package also implements a number of Machine Learning metrics including Log Loss.</p>
+<h2 id="From-scikit-learn"><a href="#From-scikit-learn" class="headerlink" title="From scikit-learn:"></a>From <a href="http://scikit-learn.org/stable/modules/model_evaluation.html#log-loss" target="_blank" rel="external">scikit-learn</a>:</h2><blockquote>
+<p>Log loss, also called logistic regression loss or cross-entropy loss, is defined on probability estimates. It is commonly used in (multinomial) logistic regression and neural networks, as well as in some variants of expectation-maximization, and can be used to evaluate the probability outputs (<code>predict_proba</code>) of a classifier instead of its discrete predictions.</p>
+<p>For binary classification with a true label $y \in {0,1}$ and a probability estimate $p = \operatorname{Pr}(y = 1)$, the log loss per sample is the negative log-likelihood of the classifier given the true label:</p>
+<p>$$L_{\log}(y, p) = -\log \operatorname{Pr}(y|p) = -(y \log (p) + (1 - y) \log (1 - p))$$</p>
+<p>This extends to the multiclass case as follows. Let the true labels for a set of samples be encoded as a 1-of-K binary indicator matrix $Y$, i.e., $y_{i,k} = 1$ if sample $i$ has label $k$ taken from a set of $K$ labels. Let $P$ be a matrix of probability estimates, with $p_{i,k} = \operatorname{Pr}(t_{i,k} = 1)$. Then the log loss of the whole set is</p>
+<p>$$L_{\log}(Y, P) = -\log \operatorname{Pr}(Y|P) = - \frac{1}{N} \sum_{i=0}^{N-1} \sum_{k=0}^{K-1} y_{i,k} \log p_{i,k}$$</p>
+<p>To see how this generalizes the binary log loss given above, note that in the binary case, $p_{i,0} = 1 - p_{i,1}$ and $y_{i,0} = 1 - y_{i,1}$, so expanding the inner sum over $y_{i,k} \in {0,1}$ gives the binary log loss.</p>
+<p>The <code>log_loss</code> function computes log loss given a list of ground-truth labels and a probability matrix, as returned by an estimator’s <code>predict_proba</code> method.</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> log_loss</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>y_true = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>y_pred = [[<span class="number">.9</span>, <span class="number">.1</span>], [<span class="number">.8</span>, <span class="number">.2</span>], [<span class="number">.3</span>, <span class="number">.7</span>], [<span class="number">.01</span>, <span class="number">.99</span>]]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>log_loss(y_true, y_pred)    </div><div class="line"><span class="number">0.1738</span>...</div></pre></td></tr></table></figure>
+<blockquote>
+<p>The first <code>[.9, .1]</code> in <code>y_pred</code> denotes 90% probability that the first sample has label 0. The log loss is non-negative.</p>
+</blockquote>
+<h1 id="Idea"><a href="#Idea" class="headerlink" title="Idea"></a>Idea</h1><p>In the <a href="https://www.ted.com/talks/mallory_soldner_your_company_s_data_could_end_world_hunger/" target="_blank" rel="external">TED talk</a> filmed September 2016, Mallory Soldner, UPS’s advanced analytics manager, talked about how can companies do <a href="https://www.wikiwand.com/en/Data_philanthropy" target="_blank" rel="external">data philanthropy</a> and why.</p>
+<h2 id="Donating-Data"><a href="#Donating-Data" class="headerlink" title="Donating Data"></a>Donating Data</h2><p>As Mallory said:</p>
+<blockquote>
+<p>Companies today, they collect mountains of data, so the first thing they can do is start donating that data. Some companies are already doing it. Take, for example, a major telecom company. They opened up their data in Senegal and the Ivory Coast and researchers discovered that if you look at the patterns in the pings to the cell phone towers, you can see where people are traveling. And that can tell you things like where malaria might spread, and you can make predictions with it. Or take for example an innovative satellite company. They opened up their data and donated it, and with that data you could track how droughts are impacting food production. With that you can actually trigger aid funding before a crisis can happen.</p>
+</blockquote>
+<h2 id="Donating-Decision-Scientists"><a href="#Donating-Decision-Scientists" class="headerlink" title="Donating Decision Scientists"></a>Donating Decision Scientists</h2><p>As Mallory said:</p>
+<blockquote>
+<p>But even if the floodgates opened up, and even if all companies donated their data to academics, to NGOs, to humanitarian organizations, it wouldn’t be enough to harness that full impact of data for humanitarian goals. Why? To unlock insights in data, you need decision scientists. Decision scientists are people like me. They take the data, they clean it up, transform it and put it into a useful algorithm that’s the best choice to address the business need at hand. In the world of humanitarian aid, there are very few decision scientists. Most of them work for companies. So that’s the second thing that companies need to do.</p>
+</blockquote>
+<h2 id="Donating-Technology-to-Gather-New-Source-of-Data"><a href="#Donating-Technology-to-Gather-New-Source-of-Data" class="headerlink" title="Donating Technology to Gather New Source of Data"></a>Donating Technology to Gather New Source of Data</h2><p>As Mallory said:</p>
+<blockquote>
+<p>Right now, Syrian refugees are flooding into Greece, and the UN refugee agency, they have their hands full. The current system for tracking people is paper and pencil, and what that means is that when a mother and her five children walk into the camp, headquarters is essentially blind to this moment. That’s all going to change in the next few weeks, thanks to private sector collaboration. There’s going to be a new system based on donated package tracking technology from the logistics company that I work for. With this new system, there will be a data trail, so you know exactly the moment when that mother and her children walk into the camp. And even more, you know if she’s going to have supplies this month and the next. Information visibility drives efficiency. For companies, using technology to gather important data, it’s like bread and butter. They’ve been doing it for years, and it’s led to major operational efficiency improvements. Just try to imagine your favorite beverage company trying to plan their inventory and not knowing how many bottles were on the shelves. It’s absurd. Data drives better decisions.</p>
+</blockquote>
+<h2 id="Why-Companies-Should-Do-These"><a href="#Why-Companies-Should-Do-These" class="headerlink" title="Why Companies Should Do These"></a>Why Companies Should Do These</h2><p>As Mallory said:</p>
+<blockquote>
+<p>Well for one thing, beyond the good PR, humanitarian aid is a 24-billion-dollar sector, and there’s over five billion people, maybe your next customers, that live in the developing world.</p>
+<p>Further, companies that are engaging in data philanthropy, they’re finding new insights locked away in their data. Take, for example, a credit card company that’s opened up a center that functions as a hub for academics, for NGOs and governments, all working together. They’re looking at information in credit card swipes and using that to find insights about how households in India live, work, earn and spend. For the humanitarian world, this provides information about how you might bring people out of poverty. But for companies, it’s providing insights about your customers and potential customers in India. It’s a win all around.</p>
+<p>Now, for me, what I find exciting about data philanthropy — donating data, donating decision scientists and donating technology — it’s what it means for young professionals like me who are choosing to work at companies. Studies show that the next generation of the workforce care about having their work make a bigger impact. We want to make a difference, and so through data philanthropy, companies can actually help engage and retain their decision scientists. And that’s a big deal for a profession that’s in high demand.</p>
+</blockquote>
+<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><h2 id="Key-notes-for-Pandas"><a href="#Key-notes-for-Pandas" class="headerlink" title="Key notes for Pandas"></a>Key notes for Pandas</h2><p>Why Pandas DataFrame but not 2D Numpy array? Because Numpy array can only contain one data type.</p>
+<p>Pandas is built on Numpy.</p>
+<p>In a simplified sense, you can think of series as a 1D labelled array.</p>
+<h2 id="pd-read-csv"><a href="#pd-read-csv" class="headerlink" title="pd.read_csv"></a>pd.read_csv</h2><p>From <a href="https://www.kaggle.com/c/word2vec-nlp-tutorial/details/part-1-for-beginners-bag-of-words" target="_blank" rel="external">https://www.kaggle.com/c/word2vec-nlp-tutorial/details/part-1-for-beginners-bag-of-words</a>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Import the pandas package, then use the "read_csv" function to read</span></div><div class="line"><span class="comment"># the labeled training data</span></div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd       </div><div class="line">train = pd.read_csv(<span class="string">"labeledTrainData.tsv"</span>, header=<span class="number">0</span>, \</div><div class="line">                    delimiter=<span class="string">"\t"</span>, quoting=<span class="number">3</span>)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>Here, “header=0” indicates that the first line of the file contains column names, “delimiter=\t” indicates that the fields are separated by tabs, and quoting=3 tells Python to ignore doubled quotes, otherwise you may encounter errors trying to read the file.</p>
+</blockquote>
+<h2 id="Context-manager"><a href="#Context-manager" class="headerlink" title="Context manager"></a>Context manager</h2><p>From <a href="https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/bringing-it-all-together-3?ex=7" target="_blank" rel="external">D]ataCamp</a>:</p>
+<blockquote>
+<p>The csv file ‘world_dev_ind.csv’ is in your current directory for your use. To begin, you need to open a connection to this file using what is known as a context manager. For example, the command with open(‘datacamp.csv’) as datacamp binds the csv file ‘datacamp.csv’ as datacamp in the context manager. Here, the with statement is the context manager, and its purpose is to ensure that resources are efficiently allocated when opening a connection to a file.</p>
+<p>If you’d like to learn more about context managers, refer to the <a href="https://campus.datacamp.com/courses/python-data-science-toolbox-part-2/bringing-it-all-together-3?ex=7" target="_blank" rel="external">DataCamp course on Importing Data in Python</a>.</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Open a connection to the file</span></div><div class="line"><span class="keyword">with</span> open(<span class="string">'world_dev_ind.csv'</span>) <span class="keyword">as</span> file:</div><div class="line"></div><div class="line">    <span class="comment"># Skip the column names</span></div><div class="line">    file.readline()</div><div class="line"></div><div class="line">    <span class="comment"># Initialize an empty dictionary: counts_dict</span></div><div class="line">    counts_dict = &#123;&#125;</div><div class="line"></div><div class="line">    <span class="comment"># Process only the first 1000 rows</span></div><div class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">1000</span>):</div><div class="line"></div><div class="line">        <span class="comment"># Split the current line into a list: line</span></div><div class="line">        line = file.readline().split(<span class="string">','</span>)</div><div class="line"></div><div class="line">        <span class="comment"># Get the value for the first column: first_col</span></div><div class="line">        first_col = line[<span class="number">0</span>]</div><div class="line"></div><div class="line">        <span class="comment"># If the column value is in the dict, increment its value</span></div><div class="line">        <span class="keyword">if</span> first_col <span class="keyword">in</span> counts_dict.keys():</div><div class="line">            counts_dict[first_col] += <span class="number">1</span></div><div class="line"></div><div class="line">        <span class="comment"># Else, add to the dict and set value to 1</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            counts_dict[first_col] = <span class="number">1</span></div><div class="line">&lt;script.py&gt; output:</div><div class="line">    &#123;<span class="string">'Euro area'</span>: <span class="number">119</span>, <span class="string">'Arab World'</span>: <span class="number">80</span>, <span class="string">'Caribbean small states'</span>: <span class="number">77</span>, <span class="string">'East Asia &amp; Pacific (all income levels)'</span>: <span class="number">122</span>, <span class="string">'Fragile and conflict affected situations'</span>: <span class="number">76</span>, <span class="string">'Europe &amp; Central Asia (developing only)'</span>: <span class="number">89</span>, <span class="string">'Central Europe and the Baltics'</span>: <span class="number">71</span>, <span class="string">'Heavily indebted poor countries (HIPC)'</span>: <span class="number">18</span>, <span class="string">'Europe &amp; Central Asia (all income levels)'</span>: <span class="number">109</span>, <span class="string">'East Asia &amp; Pacific (developing only)'</span>: <span class="number">123</span>, <span class="string">'European Union'</span>: <span class="number">116</span>&#125;</div></pre></td></tr></table></figure>
+<h2 id="Select-Data"><a href="#Select-Data" class="headerlink" title="Select Data"></a>Select Data</h2><p>Data can be selected from Pandas DataFrame using:</p>
+<ol>
+<li>Square brackets</li>
+<li>the <code>loc</code> method, which is label-based (i.e. using the labels of columns and observations)(inclusive)</li>
+<li>the <code>iloc</code> method, which is position-based (i.e. using the index of columns and observations)(exlcusive)</li>
+</ol>
+<p>Below are some examples</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Print out country column as Pandas Series</span></div><div class="line">print(cars[<span class="string">'country'</span>])</div><div class="line"></div><div class="line"><span class="comment"># Print out country column as Pandas DataFrame</span></div><div class="line">print(cars[[<span class="string">'country'</span>]])</div><div class="line"></div><div class="line"><span class="comment"># Print out DataFrame with country and drives_right columns</span></div><div class="line">print(cars[[<span class="string">'country'</span>,<span class="string">'drives_right'</span>]])</div><div class="line"></div><div class="line"><span class="comment"># Print out first 3 observations</span></div><div class="line">print(cars[:<span class="number">3</span>])</div><div class="line"></div><div class="line"><span class="comment"># Print out fourth, fifth and sixth observation</span></div><div class="line">print(cars[<span class="number">3</span>:<span class="number">6</span>])</div><div class="line"></div><div class="line"><span class="comment"># Print out drives_right column as Series</span></div><div class="line">print(cars.loc[:, <span class="string">'drives_right'</span>])</div><div class="line"></div><div class="line"><span class="comment"># Print out drives_right column as DataFrame</span></div><div class="line">print(cars.loc[:,[<span class="string">'drives_right'</span>]])</div><div class="line"></div><div class="line"><span class="comment"># Print out cars_per_cap and drives_right as DataFrame</span></div><div class="line">print(cars.loc[:,[<span class="string">'cars_per_cap'</span>,<span class="string">'drives_right'</span>]])</div></pre></td></tr></table></figure>
+<p>The <code>loc</code> and <code>iloc</code> method are more powerful but square brackets are good enough for selecting all observations of some columns.</p>
+<h2 id="Loop-over"><a href="#Loop-over" class="headerlink" title="Loop over"></a>Loop over</h2><h3 id="Dictionaries"><a href="#Dictionaries" class="headerlink" title="Dictionaries"></a>Dictionaries</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">pythonistas = &#123;<span class="string">'hugo'</span>:<span class="string">'bowne-anderson'</span>, <span class="string">'francis'</span>:<span class="string">'castro'</span>&#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> pythonistas.items():</div><div class="line">    print(key, value)</div><div class="line">&lt;script.py&gt; output:</div><div class="line">    francis castro</div><div class="line">    hugo bowne-anderson</div></pre></td></tr></table></figure>
+<h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># areas list</span></div><div class="line">areas = [<span class="number">11.25</span>, <span class="number">18.0</span>, <span class="number">20.0</span>, <span class="number">10.75</span>, <span class="number">9.50</span>]</div><div class="line"></div><div class="line"><span class="keyword">for</span> area <span class="keyword">in</span> areas:</div><div class="line">    print(area)</div><div class="line"></div><div class="line"><span class="comment"># to access the index information</span></div><div class="line"><span class="keyword">for</span> index, a <span class="keyword">in</span> enumerate(areas) :</div><div class="line">    print(<span class="string">"room "</span> + str(index) + <span class="string">": "</span> + str(a))</div><div class="line"></div><div class="line">&lt;script.py&gt; output:</div><div class="line">    room <span class="number">0</span>: <span class="number">11.25</span></div><div class="line">    room <span class="number">1</span>: <span class="number">18.0</span></div><div class="line">    room <span class="number">2</span>: <span class="number">20.0</span></div><div class="line">    room <span class="number">3</span>: <span class="number">10.75</span></div><div class="line">    room <span class="number">4</span>: <span class="number">9.5</span></div></pre></td></tr></table></figure>
+<h3 id="Numpy-array"><a href="#Numpy-array" class="headerlink" title="Numpy array"></a>Numpy array</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># For loop over np_baseball</span></div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> np.nditer(np_baseball) :</div><div class="line">    print(x)</div></pre></td></tr></table></figure>
+<h3 id="Series"><a href="#Series" class="headerlink" title="Series"></a>Series</h3><p>Simply:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> entry <span class="keyword">in</span> col:</div></pre></td></tr></table></figure>
+<h3 id="DataFrame"><a href="#DataFrame" class="headerlink" title="DataFrame"></a>DataFrame</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Iterate over rows of cars</span></div><div class="line"><span class="keyword">for</span> lab, row <span class="keyword">in</span> cars.iterrows() :</div><div class="line">    print(lab)</div><div class="line">    print(row)</div><div class="line"></div><div class="line"><span class="keyword">for</span> lab, row <span class="keyword">in</span> cars.iterrows() :</div><div class="line">    print(lab + <span class="string">": "</span> + str(row[<span class="string">"cars_per_cap"</span>]))</div><div class="line"></div><div class="line"><span class="comment"># Code for loop that adds COUNTRY column</span></div><div class="line"><span class="keyword">for</span> lab, row <span class="keyword">in</span> cars.iterrows() :</div><div class="line">    cars.loc[lab, <span class="string">"COUNTRY"</span>] = str.upper(row[<span class="string">"country"</span>])</div></pre></td></tr></table></figure>
+<h2 id="Hashing"><a href="#Hashing" class="headerlink" title="Hashing"></a>Hashing</h2><p>I encountered the following error message when doing an exercise in DataCamp:</p>
+<blockquote>
+<p>‘Series’ objects are mutable, thus they cannot be hashed</p>
+</blockquote>
+<p>As I am not sure about what does <em>hash</em> mean, I googled the error message about and found a very good explanation from Stack Overflow as follows:</p>
+<blockquote>
+<p>Hashing is a concept is computer science which is used to create high performance, pseudo random access data structures where large amount of data is to be stored and accessed quickly.</p>
+<p>For example, if you have 10,000 phone numbers, and you want store them in an array (which is a sequential data structure that stores data in contiguous memory locations, and provides random access), but you might not have the required amount of contiguous memory locations.</p>
+<p>So, you can instead use an array of size 100, and use a hash function to map a set of values to same indices, and these values can be stored in a linked list. This provides a performance similar to an array.</p>
+<p>Now, a hash function can be as simple as dividing the number with the size of the array and taking the remainder as the index.</p>
+<p>For more detail refer to <a href="https://en.wikipedia.org/wiki/Hash_function" target="_blank" rel="external">https://en.wikipedia.org/wiki/Hash_function</a></p>
+</blockquote>
+<h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><h3 id="Nested-function"><a href="#Nested-function" class="headerlink" title="Nested function"></a>Nested function</h3><p>From <a href="https://campus.datacamp.com/courses/python-data-science-toolbox-part-1/default-arguments-variable-length-arguments-and-scope?ex=7" target="_blank" rel="external">DataCamp</a>:</p>
+<blockquote>
+<p>One other pretty cool reason for nesting functions is the idea of a <strong>closure</strong>. This means that the nested or inner function remembers the state of its enclosing scope when called. Thus, anything defined locally in the enclosing scope is available to the inner function even when the outer function has finished execution.</p>
+</blockquote>
+<h3 id="Lambda-functions"><a href="#Lambda-functions" class="headerlink" title="Lambda functions"></a>Lambda functions</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Define echo_word as a lambda function: echo_word</span></div><div class="line">echo_word = (<span class="keyword">lambda</span> word1, echo: word1 * echo)</div><div class="line"></div><div class="line"><span class="comment"># Call echo_word: result</span></div><div class="line">result = echo_word(<span class="string">'hey'</span>, <span class="number">5</span>)</div><div class="line"></div><div class="line"><span class="comment"># Print result</span></div><div class="line">print(result)</div><div class="line"></div><div class="line">&lt;script.py&gt; output:</div><div class="line">    heyheyheyheyhey</div></pre></td></tr></table></figure>
+<h4 id="Map-and-lambda-functions"><a href="#Map-and-lambda-functions" class="headerlink" title="Map() and lambda functions"></a>Map() and lambda functions</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Create a list of strings: spells</span></div><div class="line">spells = [<span class="string">"protego"</span>, <span class="string">"accio"</span>, <span class="string">"expecto patronum"</span>, <span class="string">"legilimens"</span>]</div><div class="line"></div><div class="line"><span class="comment"># Use map() to apply a lambda function over spells: shout_spells</span></div><div class="line">shout_spells = map(<span class="keyword">lambda</span> item: item + <span class="string">'!!!'</span>, spells)</div><div class="line"></div><div class="line"><span class="comment"># Convert shout_spells to a list: shout_spells_list</span></div><div class="line">shout_spells_list = list(shout_spells)</div><div class="line"></div><div class="line"><span class="comment"># Convert shout_spells into a list and print it</span></div><div class="line">print(shout_spells_list)</div><div class="line"></div><div class="line">&lt;script.py&gt; output:</div><div class="line">    [<span class="string">'protego!!!'</span>, <span class="string">'accio!!!'</span>, <span class="string">'expecto patronum!!!'</span>, <span class="string">'legilimens!!!'</span>]</div></pre></td></tr></table></figure>
+<h4 id="Filter-and-lambda-functions"><a href="#Filter-and-lambda-functions" class="headerlink" title="Filter() and lambda functions"></a>Filter() and lambda functions</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Create a list of strings: fellowship</span></div><div class="line">fellowship = [<span class="string">'frodo'</span>, <span class="string">'samwise'</span>, <span class="string">'merry'</span>, <span class="string">'aragorn'</span>, <span class="string">'legolas'</span>, <span class="string">'boromir'</span>, <span class="string">'gimli'</span>]</div><div class="line"></div><div class="line"><span class="comment"># Use filter() to apply a lambda function over fellowship: result</span></div><div class="line">result = filter(<span class="keyword">lambda</span> member: len(member) &gt; <span class="number">6</span>, fellowship)</div><div class="line"></div><div class="line"><span class="comment"># Convert result to a list: result_list</span></div><div class="line">result_list = list(result)</div><div class="line"></div><div class="line"><span class="comment"># Convert result into a list and print it</span></div><div class="line">print(result_list)</div><div class="line"></div><div class="line">&lt;script.py&gt; output:</div><div class="line">    [<span class="string">'samwise'</span>, <span class="string">'aragorn'</span>, <span class="string">'legolas'</span>, <span class="string">'boromir'</span>]</div></pre></td></tr></table></figure>
+<h3 id="Iterators"><a href="#Iterators" class="headerlink" title="Iterators"></a>Iterators</h3><h4 id="Iterables"><a href="#Iterables" class="headerlink" title="Iterables"></a>Iterables</h4><ul>
+<li>Examples: Lists, strings, dictionaries, file connections</li>
+<li>An <em>object</em> with an associated <code>iter()</code> method</li>
+<li>Apply <code>iter()</code> to an <em>iterable</em> creates an <em>iterator</em>, an object with an associated <code>next()</code> method</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">it = iter(<span class="string">'Da'</span>)</div><div class="line">next(it)</div><div class="line"><span class="string">'D'</span></div><div class="line">next(it)</div><div class="line"><span class="string">'a'</span></div></pre></td></tr></table></figure>
+<h4 id="Writing-an-iterator-to-load-data-in-chunks"><a href="#Writing-an-iterator-to-load-data-in-chunks" class="headerlink" title="Writing an iterator to load data in chunks"></a>Writing an iterator to load data in chunks</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"></div><div class="line"><span class="comment"># Initialize reader object: urb_pop_reader</span></div><div class="line">urb_pop_reader = pd.read_csv(<span class="string">'ind_pop_data.csv'</span>, chunksize=<span class="number">1000</span>)</div><div class="line"></div><div class="line"><span class="comment"># Initialize empty DataFrame: data</span></div><div class="line">data = pd.DataFrame()</div><div class="line"></div><div class="line"><span class="comment"># Iterate over each DataFrame chunk</span></div><div class="line"><span class="keyword">for</span> df_urb_pop <span class="keyword">in</span> urb_pop_reader:</div><div class="line"></div><div class="line">    <span class="comment"># Check out specific country: df_pop_ceb</span></div><div class="line">    df_pop_ceb = df_urb_pop[df_urb_pop[<span class="string">'CountryCode'</span>] == <span class="string">'CEB'</span>]</div><div class="line"></div><div class="line">    <span class="comment"># Zip DataFrame columns of interest: pops</span></div><div class="line">    pops = zip(df_pop_ceb[<span class="string">'Total Population'</span>],</div><div class="line">                df_pop_ceb[<span class="string">'Urban population (% of total)'</span>])</div><div class="line"></div><div class="line">    <span class="comment"># Turn zip object into list: pops_list</span></div><div class="line">    pops_list = list(pops)</div><div class="line"></div><div class="line">    <span class="comment"># Use list comprehension to create new DataFrame column 'Total Urban Population'</span></div><div class="line">    df_pop_ceb[<span class="string">'Total Urban Population'</span>] = [int(tup[<span class="number">0</span>] * tup[<span class="number">1</span>]) <span class="keyword">for</span> tup <span class="keyword">in</span> pops_list]</div><div class="line"></div><div class="line">    <span class="comment"># Append DataFrame chunk to data: data</span></div><div class="line">    data = data.append(df_pop_ceb)</div><div class="line"></div><div class="line"><span class="comment"># Plot urban population data</span></div><div class="line">data.plot(kind=<span class="string">'scatter'</span>, x=<span class="string">'Year'</span>, y=<span class="string">'Total Urban Population'</span>)</div><div class="line">plt.show()</div></pre></td></tr></table></figure>
+<h2 id="Broadcasting"><a href="#Broadcasting" class="headerlink" title="Broadcasting"></a>Broadcasting</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Assigning scaler value (`np.nan` in this case) to column slice broadcasts value to each row.</span></div><div class="line"><span class="comment"># The slice consists of every 3rd row starting from 0 in the last column.</span></div><div class="line">APPL.iL=loc[::<span class="number">3</span>, <span class="number">-1</span>] = np.nan</div></pre></td></tr></table></figure>
+<h2 id="Joining-DataFrames"><a href="#Joining-DataFrames" class="headerlink" title="Joining DataFrames"></a>Joining DataFrames</h2><p>Which should you use? Use the simplest tool that works.</p>
+<ul>
+<li>df1.append(df2) : stacking <em>vertically</em></li>
+<li>pd.concat([df1, df2]):<ul>
+<li>stacking many horizontally or vertically</li>
+<li>simple inner/outer joins on indexes</li>
+</ul>
+</li>
+<li>df1.join(df2): inner/outer/<em>left</em>/<em>right</em> joins on indexes</li>
+<li>pd.merge([df1, df2]): many joins on multiple <em>columns</em></li>
+</ul>
+<h1 id="NLP"><a href="#NLP" class="headerlink" title="NLP"></a>NLP</h1><h2 id="Data-Cleaning-and-Text-Preprocessing"><a href="#Data-Cleaning-and-Text-Preprocessing" class="headerlink" title="Data Cleaning and Text Preprocessing"></a>Data Cleaning and Text Preprocessing</h2><p>Removing HTML Markup: The BeautifulSoup Package</p>
+<p><a href="https://www.kaggle.com/c/word2vec-nlp-tutorial/details/part-1-for-beginners-bag-of-words" target="_blank" rel="external">https://www.kaggle.com/c/word2vec-nlp-tutorial/details/part-1-for-beginners-bag-of-words</a></p>
+<h3 id="Tokenization"><a href="#Tokenization" class="headerlink" title="Tokenization"></a>Tokenization</h3><p><a href="https://www.kaggle.com/c/word2vec-nlp-tutorial/details/part-1-for-beginners-bag-of-words" target="_blank" rel="external">https://www.kaggle.com/c/word2vec-nlp-tutorial/details/part-1-for-beginners-bag-of-words</a>:</p>
+<p>Splitting the documents into individual words.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">lower_case = letters_only.lower()        <span class="comment"># Convert to lower case</span></div><div class="line">words = lower_case.split()               <span class="comment"># Split into words</span></div></pre></td></tr></table></figure>
+<h3 id="Stop-Words"><a href="#Stop-Words" class="headerlink" title="Stop Words"></a>Stop Words</h3><p><a href="https://www.kaggle.com/c/word2vec-nlp-tutorial/details/part-1-for-beginners-bag-of-words" target="_blank" rel="external">https://www.kaggle.com/c/word2vec-nlp-tutorial/details/part-1-for-beginners-bag-of-words</a>:</p>
+<blockquote>
+<p>Finally, we need to decide how to deal with frequently occurring words that don’t carry much meaning. Such words are called “stop words”; in English they include words such as “a”, “and”, “is”, and “the”. Conveniently, there are Python packages that come with stop word lists built in. Let’s import a stop word list from the Python Natural Language Toolkit (NLTK). You’ll need to install the library if you don’t already have it on your computer; you’ll also need to install the data packages that come with it, as follows:</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> nltk</div><div class="line">nltk.download()  <span class="comment"># Download text data sets, including stop words</span></div><div class="line"><span class="keyword">from</span> nltk.corpus <span class="keyword">import</span> stopwords <span class="comment"># Import the stop word list</span></div><div class="line"><span class="keyword">print</span> stopwords.words(<span class="string">"english"</span>)</div><div class="line"><span class="comment"># Remove stop words from "words"</span></div><div class="line">words = [w <span class="keyword">for</span> w <span class="keyword">in</span> words <span class="keyword">if</span> <span class="keyword">not</span> w <span class="keyword">in</span> stopwords.words(<span class="string">"english"</span>)]</div><div class="line"><span class="keyword">print</span> words</div></pre></td></tr></table></figure>
+<h3 id="unicode-string"><a href="#unicode-string" class="headerlink" title="unicode string"></a>unicode string</h3><p><a href="https://www.kaggle.com/c/word2vec-nlp-tutorial/details/part-1-for-beginners-bag-of-words" target="_blank" rel="external">https://www.kaggle.com/c/word2vec-nlp-tutorial/details/part-1-for-beginners-bag-of-words</a>:</p>
+<blockquote>
+<p>Don’t worry about the “u” before each word; it just indicates that Python is internally representing each word as a unicode string.</p>
+</blockquote>
+<h3 id="other-1"><a href="#other-1" class="headerlink" title="other"></a>other</h3><blockquote>
+<p>There are many other things we could do to the data - For example, Porter Stemming and Lemmatizing (both available in NLTK) would allow us to treat “messages”, “message”, and “messaging” as the same word, which could certainly be useful. However, for simplicity, the tutorial will stop here.</p>
+</blockquote>
+<h2 id="Extracting-features-from-text-files"><a href="#Extracting-features-from-text-files" class="headerlink" title="Extracting features from text files"></a>Extracting features from text files</h2><h3 id="Bag-of-Words-Model"><a href="#Bag-of-Words-Model" class="headerlink" title="Bag of Words Model"></a>Bag of Words Model</h3><p>According to <a href="http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html#extracting-features-from-text-files" target="_blank" rel="external">scikit-learn</a>:</p>
+<blockquote>
+<p>In order to perform machine learning on text documents, we first need to turn the text content into numerical feature vectors.</p>
+<p>The most intuitive way to do so is the bags of words representation…</p>
+</blockquote>
+<p>According to <a href="https://www.wikiwand.com/en/Bag-of-words_model" target="_blank" rel="external">Wikipedia</a>:</p>
+<blockquote>
+<p>The bag-of-words model is a simplifying representation used in natural language processing and information retrieval (IR). In this model, a text (such as a sentence or a document) is represented as the bag (multiset) of its words, disregarding grammar and even word order but keeping multiplicity.</p>
+</blockquote>
+<p>It is a <em>simplifying</em> representation as grammar and word order are disregarded.</p>
+<p><a href="https://www.kaggle.com/c/word2vec-nlp-tutorial/details/part-1-for-beginners-bag-of-words" target="_blank" rel="external">https://www.kaggle.com/c/word2vec-nlp-tutorial/details/part-1-for-beginners-bag-of-words</a></p>
+<blockquote>
+<p>Now that we have our training reviews tidied up, how do we convert them to some kind of numeric representation for machine learning? One common approach is called a Bag of Words. The Bag of Words model learns a vocabulary from all of the documents, then models each document by counting the number of times each word appears. For example, consider the following two sentences:</p>
+<p>Sentence 1: “The cat sat on the hat”</p>
+<p>Sentence 2: “The dog ate the cat and the hat”</p>
+<p>From these two sentences, our vocabulary is as follows:</p>
+<p>{ the, cat, sat, on, hat, dog, ate, and }</p>
+<p>To get our bags of words, we count the number of times each word occurs in each sentence. In Sentence 1, “the” appears twice, and “cat”, “sat”, “on”, and “hat” each appear once, so the feature vector for Sentence 1 is:</p>
+<p>{ the, cat, sat, on, hat, dog, ate, and }</p>
+<p>Sentence 1: { 2, 1, 1, 1, 1, 0, 0, 0 }</p>
+<p>Similarly, the features for Sentence 2 are: { 3, 1, 0, 0, 1, 1, 1, 1}</p>
+<p>In the IMDB data, we have a very large number of reviews, which will give us a large vocabulary. To limit the size of the feature vectors, we should choose some maximum vocabulary size. Below, we use the 5000 most frequent words (remembering that stop words have already been removed).</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> <span class="string">"Creating the bag of words...\n"</span></div><div class="line"><span class="keyword">from</span> sklearn.feature_extraction.text <span class="keyword">import</span> CountVectorizer</div><div class="line"></div><div class="line"><span class="comment"># Initialize the "CountVectorizer" object, which is scikit-learn's</span></div><div class="line"><span class="comment"># bag of words tool.  </span></div><div class="line">vectorizer = CountVectorizer(analyzer = <span class="string">"word"</span>,   \</div><div class="line">                             tokenizer = <span class="keyword">None</span>,    \</div><div class="line">                             preprocessor = <span class="keyword">None</span>, \</div><div class="line">                             stop_words = <span class="keyword">None</span>,   \</div><div class="line">                             max_features = <span class="number">5000</span>)</div><div class="line"></div><div class="line"><span class="comment"># fit_transform() does two functions: First, it fits the model</span></div><div class="line"><span class="comment"># and learns the vocabulary; second, it transforms our training data</span></div><div class="line"><span class="comment"># into feature vectors. The input to fit_transform should be a list of</span></div><div class="line"><span class="comment"># strings.</span></div><div class="line">train_data_features = vectorizer.fit_transform(clean_train_reviews)</div><div class="line"></div><div class="line"><span class="comment"># Numpy arrays are easy to work with, so convert the result to an</span></div><div class="line"><span class="comment"># array</span></div><div class="line">train_data_features = train_data_features.toarray()</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> train_data_features.shape</div><div class="line">(<span class="number">25000</span>, <span class="number">5000</span>)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>It has 25,000 rows and 5,000 features (one for each vocabulary word).</p>
+<p>Note that CountVectorizer comes with its own options to automatically do preprocessing, tokenization, and stop word removal – for each of these, instead of specifying “None”, we could have used a built-in method or specified our own function to use.  See <a href="http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html" target="_blank" rel="external">the function documentation</a> for more details. However, we wanted to write our own function for data cleaning in this tutorial to show you how it’s done step by step.</p>
+<p>Now that the Bag of Words model is trained, let’s look at the vocabulary:</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Take a look at the words in the vocabulary</span></div><div class="line">vocab = vectorizer.get_feature_names()</div><div class="line"><span class="keyword">print</span> vocab</div></pre></td></tr></table></figure>
+<blockquote>
+<p>If you’re interested, you can also print the counts of each word in the vocabulary:</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"></div><div class="line"><span class="comment"># Sum up the counts of each vocabulary word</span></div><div class="line">dist = np.sum(train_data_features, axis=<span class="number">0</span>)</div><div class="line"></div><div class="line"><span class="comment"># For each, print the vocabulary word and the number of times it</span></div><div class="line"><span class="comment"># appears in the training set</span></div><div class="line"><span class="keyword">for</span> tag, count <span class="keyword">in</span> zip(vocab, dist):</div><div class="line">    <span class="keyword">print</span> count, tag</div></pre></td></tr></table></figure>
+<p>Bag of words is a model of text data that can be converted to and feed to machining learning algorithm for model induction.</p>
+<h3 id="TF-IDF"><a href="#TF-IDF" class="headerlink" title="TF-IDF"></a>TF-IDF</h3><p>From <a href="http://stevenloria.com/finding-important-words-in-a-document-using-tf-idf/" target="_blank" rel="external">http://stevenloria.com/finding-important-words-in-a-document-using-tf-idf/</a>:</p>
+<p>TF-IDF stands for “Term Frequency, Inverse Document Frequency”. It is a way to score the importance of words (or “terms”) in a document based on how frequently they appear across multiple documents.</p>
+<p>Intuitively…<br>If a word appears frequently in a document, it’s important. Give the word a high score.<br>But if a word appears in many documents, it’s not a unique identifier. Give the word a low score.<br>Therefore, common words like “the” and “for”, which appear in many documents, will be scaled down. Words that appear frequently in a single document will be scaled up.</p>
+<p><a href="http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html" target="_blank" rel="external">http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html</a></p>
+<p>According to <a href="http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html#extracting-features-from-text-files" target="_blank" rel="external">scikit-learn</a>:</p>
+<blockquote>
+<p>Occurrence count is a good start but there is an issue: longer documents will have higher average count values than shorter documents, even though they might talk about the same topics.</p>
+<p>To avoid these potential discrepancies it suffices to divide the number of occurrences of each word in a document by the total number of words in the document: these new features are called <code>tf</code> for Term Frequencies.</p>
+<p>Another refinement on top of <code>tf</code> is to downscale weights for words that occur in many documents in the corpus and are therefore less informative than those that occur only in a smaller portion of the corpus.</p>
+<p>This downscaling is called tf–idf for “Term Frequency times Inverse Document Frequency”.</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; print("\n".join(twenty_train.data[0].split("\n")[:3]))</div><div class="line">From: sd345@city.ac.uk (Michael Collier)</div><div class="line">Subject: Converting images to HP LaserJet III?</div><div class="line">Nntp-Posting-Host: hampton</div><div class="line"></div><div class="line">&gt;&gt;&gt; from sklearn.feature_extraction.text import CountVectorizer</div><div class="line">&gt;&gt;&gt; count_vect = CountVectorizer()</div><div class="line">&gt;&gt;&gt; X_train_counts = count_vect.fit_transform(twenty_train.data)</div><div class="line">&gt;&gt;&gt; X_train_counts.shape</div><div class="line">(2257, 35788)</div></pre></td></tr></table></figure>
+<p><code>TfidfTransformer</code> can be used to transform the count-matrix to a tf-idf representation:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>tfidf_transformer = TfidfTransformer()</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>X_train_tfidf = tfidf_transformer.fit_transform(X_train_counts)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>X_train_tfidf.shape</div><div class="line">(<span class="number">2257</span>, <span class="number">35788</span>)</div></pre></td></tr></table></figure>
+<h2 id="Training-a-classifier"><a href="#Training-a-classifier" class="headerlink" title="Training a classifier"></a>Training a classifier</h2><blockquote>
+<p>Now that we have our features, we can train a classifier to try to predict the category of a post. Let’s start with a naïve Bayes classifier, which provides a nice baseline for this task. <code>scikit-learn</code> includes several variants of this classifier; the one most suitable for word counts is the multinomial variant:</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; from sklearn.naive_bayes import MultinomialNB</div><div class="line">&gt;&gt;&gt; clf = MultinomialNB().fit(X_train_tfidf, twenty_train.target)</div><div class="line"></div><div class="line">&gt;&gt;&gt; docs_new = ['God is love', 'OpenGL on the GPU is fast']</div><div class="line">&gt;&gt;&gt; X_new_counts = count_vect.transform(docs_new)</div><div class="line">&gt;&gt;&gt; X_new_tfidf = tfidf_transformer.transform(X_new_counts)</div><div class="line"></div><div class="line">&gt;&gt;&gt; predicted = clf.predict(X_new_tfidf)</div><div class="line"></div><div class="line">&gt;&gt;&gt; for doc, category in zip(docs_new, predicted):</div><div class="line">...     print('%r =&gt; %s' % (doc, twenty_train.target_names[category]))</div><div class="line">...</div><div class="line">'God is love' =&gt; soc.religion.christian</div><div class="line">'OpenGL on the GPU is fast' =&gt; comp.graphics</div></pre></td></tr></table></figure>
+<h2 id="Building-a-pipeline"><a href="#Building-a-pipeline" class="headerlink" title="Building a pipeline"></a>Building a pipeline</h2><blockquote>
+<p>In order to make the vectorizer =&gt; transformer =&gt; classifier easier to work with, scikit-learn provides a Pipeline class that behaves like a compound classifier:</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.pipeline <span class="keyword">import</span> Pipeline</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>text_clf = Pipeline([(<span class="string">'vect'</span>, CountVectorizer()),</div><div class="line"><span class="meta">... </span>                     (<span class="string">'tfidf'</span>, TfidfTransformer()),</div><div class="line"><span class="meta">... </span>                     (<span class="string">'clf'</span>, MultinomialNB()),</div><div class="line"><span class="meta">... </span>])</div></pre></td></tr></table></figure>
+<p>The names <code>vect</code>, <code>tfidf</code> and <code>clf</code> (classifier) are arbitrary. We shall see their use in the section on grid search, below. We can now train the model with a single command:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>text_clf = text_clf.fit(twenty_train.data, twenty_train.target)</div></pre></td></tr></table></figure>
+<h2 id="Evaluation-of-the-performance-on-the-test-set"><a href="#Evaluation-of-the-performance-on-the-test-set" class="headerlink" title="Evaluation of the performance on the test set"></a>Evaluation of the performance on the test set</h2><blockquote>
+<p>Evaluating the predictive accuracy of the model is equally easy:</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>twenty_test = fetch_20newsgroups(subset=<span class="string">'test'</span>,</div><div class="line"><span class="meta">... </span>    categories=categories, shuffle=<span class="keyword">True</span>, random_state=<span class="number">42</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>docs_test = twenty_test.data</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>predicted = text_clf.predict(docs_test)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>np.mean(predicted == twenty_test.target)            </div><div class="line"><span class="number">0.834</span>...</div></pre></td></tr></table></figure>
+<blockquote>
+<p>I.e., we achieved 83.4% accuracy. Let’s see if we can do better with a linear support vector machine (SVM), which is widely regarded as one of the best text classification algorithms (although it’s also a bit slower than naïve Bayes). We can change the learner by just plugging a different classifier object into our pipeline:</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> SGDClassifier</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>text_clf = Pipeline([(<span class="string">'vect'</span>, CountVectorizer()),</div><div class="line"><span class="meta">... </span>                     (<span class="string">'tfidf'</span>, TfidfTransformer()),</div><div class="line"><span class="meta">... </span>                     (<span class="string">'clf'</span>, SGDClassifier(loss=<span class="string">'hinge'</span>, penalty=<span class="string">'l2'</span>,</div><div class="line"><span class="meta">... </span>                                           alpha=<span class="number">1e-3</span>, n_iter=<span class="number">5</span>, random_state=<span class="number">42</span>)),</div><div class="line"><span class="meta">... </span>])</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>_ = text_clf.fit(twenty_train.data, twenty_train.target)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>predicted = text_clf.predict(docs_test)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>np.mean(predicted == twenty_test.target)            </div><div class="line"><span class="number">0.912</span>...</div></pre></td></tr></table></figure>
+<blockquote>
+<p><code>scikit-learn</code> further provides utilities for more detailed performance analysis of the results:</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> sklearn <span class="keyword">import</span> metrics</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>print(metrics.classification_report(twenty_test.target, predicted,</div><div class="line"><span class="meta">... </span>    target_names=twenty_test.target_names))</div><div class="line"><span class="meta">... </span>                                        </div><div class="line">                        precision    recall  f1-score   support</div><div class="line"></div><div class="line">           alt.atheism       <span class="number">0.95</span>      <span class="number">0.81</span>      <span class="number">0.87</span>       <span class="number">319</span></div><div class="line">         comp.graphics       <span class="number">0.88</span>      <span class="number">0.97</span>      <span class="number">0.92</span>       <span class="number">389</span></div><div class="line">               sci.med       <span class="number">0.94</span>      <span class="number">0.90</span>      <span class="number">0.92</span>       <span class="number">396</span></div><div class="line">soc.religion.christian       <span class="number">0.90</span>      <span class="number">0.95</span>      <span class="number">0.93</span>       <span class="number">398</span></div><div class="line"></div><div class="line">           avg / total       <span class="number">0.92</span>      <span class="number">0.91</span>      <span class="number">0.91</span>      <span class="number">1502</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>metrics.confusion_matrix(twenty_test.target, predicted)</div><div class="line">array([[<span class="number">258</span>,  <span class="number">11</span>,  <span class="number">15</span>,  <span class="number">35</span>],</div><div class="line">       [  <span class="number">4</span>, <span class="number">379</span>,   <span class="number">3</span>,   <span class="number">3</span>],</div><div class="line">       [  <span class="number">5</span>,  <span class="number">33</span>, <span class="number">355</span>,   <span class="number">3</span>],</div><div class="line">       [  <span class="number">5</span>,  <span class="number">10</span>,   <span class="number">4</span>, <span class="number">379</span>]])</div></pre></td></tr></table></figure>
+<blockquote>
+<p>As expected the confusion matrix shows that posts from the newsgroups on atheism and christian are more often confused for one another than with computer graphics.</p>
+</blockquote>
+<h2 id="Parameter-tuning-using-grid-search"><a href="#Parameter-tuning-using-grid-search" class="headerlink" title="Parameter tuning using grid search"></a>Parameter tuning using grid search</h2><p><a href="http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html#from-occurrences-to-frequencies" target="_blank" rel="external">http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html#from-occurrences-to-frequencies</a></p>
+<h2 id="Additional-Reference"><a href="#Additional-Reference" class="headerlink" title="Additional Reference"></a>Additional Reference</h2><p><a href="http://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction" target="_blank" rel="external">http://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction</a></p>
+<h1 id="Use-cases"><a href="#Use-cases" class="headerlink" title="Use cases"></a>Use cases</h1><p><a href="https://www.kaggle.com/wiki/DataScienceUseCases" target="_blank" rel="external">https://www.kaggle.com/wiki/DataScienceUseCases</a><br><a href="http://cs229.stanford.edu/projects2016.html" target="_blank" rel="external">http://cs229.stanford.edu/projects2016.html</a><br><a href="http://cs229.stanford.edu/projects2015.html" target="_blank" rel="external">http://cs229.stanford.edu/projects2015.html</a><br><a href="http://cs229.stanford.edu/projects2014.html" target="_blank" rel="external">http://cs229.stanford.edu/projects2014.html</a><br><a href="http://cs229.stanford.edu/projects2013.html" target="_blank" rel="external">http://cs229.stanford.edu/projects2013.html</a><br><a href="http://cs229.stanford.edu/projects2012.html" target="_blank" rel="external">http://cs229.stanford.edu/projects2012.html</a><br><a href="https://www.datarobot.com/use-cases/" target="_blank" rel="external">https://www.datarobot.com/use-cases/</a></p>
+<ul>
+<li>autonomous driving</li>
+<li>image annotation</li>
+<li>game-playing</li>
+<li><a href="http://people.eecs.berkeley.edu/~jordan/papers/ng-etal03.pdf" target="_blank" rel="external">helicopter flying</a></li>
+<li><a href="https://deepmind.com/blog/wavenet-generative-model-raw-audio/" target="_blank" rel="external">speech synthesis</a></li>
+<li>movie recommendation</li>
+</ul>
+<p>Health: <a href="https://www.humandx.org/" target="_blank" rel="external">improving diagnosis</a>, <a href="http://www.accurx.com/home" target="_blank" rel="external">predicting outbreaks of dengue](http://aime.life/), reducing inappropriate antibiotics use</a><br>Global poverty: <a href="http://web.archive.org/web/20170615121008/http://www.datakind.org/projects/machine-learning-to-help-rural-households-access-electricity" target="_blank" rel="external">identifying appropriate customers for pay-as-you-go solar electricity</a>, <a href="http://web.archive.org/web/20160714072759/http://www.datakind.org/projects/using-the-simple-to-be-radical/" target="_blank" rel="external">using satellite imagery to find the right villages to receive cash transfers</a><br>Animal welfare: <a href="http://web.archive.org/web/20170614185031/http://www.economist.com/news/technology-quarterly/21645497-tech-startups-are-moving-food-business-make-sustainable-versions-meat" target="_blank" rel="external">predicting which plant proteins will be best for making plant-based meat</a></p>
+<h2 id="FS"><a href="#FS" class="headerlink" title="FS:"></a>FS:</h2><p>金融大脑、客户画像、精准营销、客户信用评价、风险监控、智能投顾、智能客服</p>
+<p>身份認證:<br>將活體識別、聲紋識別等技術用於身份識別，可運用於遠程開戶、遠程授信、刷臉支付等金融交易環節和場景。並且已經和泰康人壽進行合作，進行投保業務的身份認證，也應用在了自己的金融產品百度錢包中，還包括空港易行的機場 VIP 身份認證。</p>
+<p>業務智能分析:<br>摩根大通在今年 1 月份上線了 X-Connect 用來檢索電子郵件，幫助員工找到與潛在客戶關係最密切的同事，促進業務機會。</p>
+<h3 id="Recommend-follow-on-equity-offerings"><a href="#Recommend-follow-on-equity-offerings" class="headerlink" title="Recommend follow-on equity offerings"></a>Recommend follow-on equity offerings</h3><p>Per page 49 of <a href="https://www.jpmorganchase.com/corporate/investor-relations/document/2016-annualreport.pdf" target="_blank" rel="external">JPMorgan’s 2016 Annual Shareholder Report</a>, in 2015 JPMorgan introduced “the Emerging Opportunities Engine, which helps identify clients best positioned for follow-on equity offerings through automated analysis of current financial positions, market conditions and historical data.”</p>
+<h3 id="Extract-important-data-points-and-clauses-from-legal-documents"><a href="#Extract-important-data-points-and-clauses-from-legal-documents" class="headerlink" title="Extract important data points and clauses from legal documents"></a>Extract important data points and clauses from legal documents</h3><p>Per page 49 of <a href="https://www.jpmorganchase.com/corporate/investor-relations/document/2016-annualreport.pdf" target="_blank" rel="external">JPMorgan’s 2016 Annual Shareholder Report</a>:</p>
+<blockquote>
+<p>As an example, we recently introduced COiN, a contract intelligence platform that uses unsupervised machine learning to analyze legal documents and to extract important data points and clauses. In an initial implementation of this technology, we can extract 150 relevant attributes from 12,000 annual commercial credit agreements in seconds compared with as many as 360,000 hours per year under manual review. This capability has far-reaching implications considering that approximately 80% of loan servicing errors today are due to contract interpretation errors.</p>
+</blockquote>
+<p>But not sure how the analysis results can be further used.</p>
+<h3 id="detecting-anomalies-for-fraud"><a href="#detecting-anomalies-for-fraud" class="headerlink" title="detecting anomalies for fraud"></a>detecting anomalies for fraud</h3><p>Per page 49 of <a href="https://www.jpmorganchase.com/corporate/investor-relations/document/2016-annualreport.pdf" target="_blank" rel="external">JPMorgan’s 2016 Annual Shareholder Report</a>.</p>
+<h3 id="detecting-anomalies-for-fraud-and-cybersecurity"><a href="#detecting-anomalies-for-fraud-and-cybersecurity" class="headerlink" title="detecting anomalies for fraud and cybersecurity"></a>detecting anomalies for fraud and cybersecurity</h3><p>Per page 49 of <a href="https://www.jpmorganchase.com/corporate/investor-relations/document/2016-annualreport.pdf" target="_blank" rel="external">JPMorgan’s 2016 Annual Shareholder Report</a>.</p>
+<h3 id="generating-targeted-trading-strategies-to-share-with-clients"><a href="#generating-targeted-trading-strategies-to-share-with-clients" class="headerlink" title="generating targeted trading strategies to share with clients"></a>generating targeted trading strategies to share with clients</h3><p>Per page 49 of <a href="https://www.jpmorganchase.com/corporate/investor-relations/document/2016-annualreport.pdf" target="_blank" rel="external">JPMorgan’s 2016 Annual Shareholder Report</a>.</p>
+<h3 id="optimizing-clientservicing-channels"><a href="#optimizing-clientservicing-channels" class="headerlink" title="optimizing clientservicing channels"></a>optimizing clientservicing channels</h3><p>Per page 49 of <a href="https://www.jpmorganchase.com/corporate/investor-relations/document/2016-annualreport.pdf" target="_blank" rel="external">JPMorgan’s 2016 Annual Shareholder Report</a>.</p>
+<h3 id="respond-to-employee-technology-service-desk-requests-through-a-natural-language-interface"><a href="#respond-to-employee-technology-service-desk-requests-through-a-natural-language-interface" class="headerlink" title="respond to employee technology service desk requests through a natural language interface"></a>respond to employee technology service desk requests through a natural language interface</h3><p>Per page 49 of <a href="https://www.jpmorganchase.com/corporate/investor-relations/document/2016-annualreport.pdf" target="_blank" rel="external">JPMorgan’s 2016 Annual Shareholder Report</a>.</p>
+<h1 id="Industry-News"><a href="#Industry-News" class="headerlink" title="Industry News"></a>Industry News</h1><ul>
+<li><a href="http://www.bank-of-china.com/big5/aboutboc/bi1/201706/t20170622_9651860.html" target="_blank" rel="external">中銀與騰訊攜手成立金融科技聯合實驗室</a></li>
+<li><a href="https://www.jiqizhixin.com/articles/ba76cf39-e9d5-494d-b292-464f95170c5b" target="_blank" rel="external">農行與百度戰略合作 攜手成立金融科技聯合實驗室</a></li>
+</ul>
+<h2 id="Deep-learning"><a href="#Deep-learning" class="headerlink" title="Deep learning"></a>Deep learning</h2><ul>
+<li>image classification</li>
+<li>face recognition</li>
+<li>self driving car</li>
+</ul>
+<h1 id="Career"><a href="#Career" class="headerlink" title="Career"></a>Career</h1><p><a href="https://80000hours.org/career-reviews/machine-learning-phd/" target="_blank" rel="external">80000 Hours</a>:</p>
+<blockquote>
+<p>According to someone we spoke to in the industry, a machine learning PhD is a good preparation for getting a high earning job in a quantitative hedge fund.</p>
+<p>Machine learning is a hot area a lot of people want to get into, so there is a risk that it could become more difficult to get jobs as lots of people crowd into the area. For example, MIT’s introduction to machine learning course recently had 700 people sign up – they had to use an overflow lecture room and deliberately weed people out of the course early.<sup><a href="https://80000hours.org/career-reviews/machine-learning-phd/#fn-18" target="_blank" rel="external">18</a></sup> If machine learning turns out to progress more slowly than is expected, and doesn’t live up to the hype, then the number of jobs might shrink as well.</p>
+<p>If you’re going for machine learning research positions in academia or industry, you’ll need a PhD. It can also be helpful to have a PhD (or even further academic experience) to set up a startup that develops cutting-edge techniques. But for most non-research positions in industry, including at top firms such as Google, a master’s is sufficient. For industry jobs that aren’t pure research, going on to get a PhD isn’t an advantage and probably isn’t worth the time cost.</p>
+<p>Also bear in mind that many data-analysis problems that companies and nonprofits have don’t require machine learning to solve – often good solutions can be built using simple data science methods instead.<sub><a href="https://80000hours.org/career-reviews/machine-learning-phd/#fn-19" target="_blank" rel="external">19</a></sub></p>
+</blockquote>
+<h2 id="How-to-become-machine-learning-researcher"><a href="#How-to-become-machine-learning-researcher" class="headerlink" title="How to become machine learning researcher"></a>How to become machine learning researcher</h2><p><a href="https://80000hours.org/career-reviews/machine-learning-phd/" target="_blank" rel="external">80000 Hours</a>:</p>
+<blockquote>
+<p>Read research papers and try replicating their results (Andrew Ng <a href="https://youtu.be/F1ka6a13S9I?t=1h10m25s" target="_blank" rel="external">recommends</a> this to become an excellent machine learning researcher). Some papers you could do this with:</p>
+<p><a href="https://github.com/ChristosChristofidis/awesome-deep-learning" target="_blank" rel="external">Important deep learning papers</a><br><a href="https://github.com/aikorea/awesome-rl#papers--thesis" target="_blank" rel="external">Important reinforcement learning papers</a><br>Papers from <a href="https://80000hours.org/ai-safety-syllabus/#conferences" target="_blank" rel="external">top conferences</a></p>
+</blockquote>
+<h2 id="Other-advice"><a href="#Other-advice" class="headerlink" title="Other advice"></a>Other advice</h2><blockquote>
+<p>Software Engineering — For Type A data science, let me be clear: engineering is a separate discipline. So if this is the type of data scientist you want to become, you do not need to be an engineer. However, if you want to put machine learning algorithms into production (i.e. Type B), you will need a strong foundation in software engineering.<br><a href="https://medium.com/towards-data-science/how-to-become-a-data-scientist-part-1-3-8706a62b809e" target="_blank" rel="external">How to Become a Data Scientist (Part 1/3)</a></p>
+</blockquote>
+<h2 id="Interview-Questions"><a href="#Interview-Questions" class="headerlink" title="Interview Questions"></a>Interview Questions</h2><h3 id="Why-data-science-is-science"><a href="#Why-data-science-is-science" class="headerlink" title="Why data science is science?"></a>Why data science is science?</h3><blockquote>
+<p>Before we delve any deeper, it is worth taking a moment to reflect on the ‘science’ in ‘data science’, because — in a sense — all scientists are data scientists, as they all work with data in one form or another. But to take what is generally considered to be data science in industry, what actually makes it a science? Great question! The answer should be: ‘the scientific method’. Given the multi-disciplinary nature of science, the scientific method is the one thing that binds the fields together. If you got this right, full marks to you.<br><a href="https://medium.com/towards-data-science/how-to-become-a-data-scientist-part-1-3-8706a62b809e" target="_blank" rel="external">How to Become a Data Scientist (Part 1/3)</a></p>
+</blockquote>
+<h3 id="Why-you’re-suitable-for-this-job"><a href="#Why-you’re-suitable-for-this-job" class="headerlink" title="Why you’re suitable for this job"></a>Why you’re suitable for this job</h3><p>####Strong problem solving ability</p>
+<blockquote>
+<p>Clearly, you need to possess the tools to solve the problems, but they are just that: tools. In this sense, even the statistical/machine learning techniques can be thought of as the tools by which you solve problems. New techniques arise, technology evolves; the one constant is problem solving.<br><a href="https://medium.com/towards-data-science/how-to-become-a-data-scientist-part-1-3-8706a62b809e" target="_blank" rel="external">How to Become a Data Scientist (Part 1/3)</a></p>
+</blockquote>
+<h3 id="My-strength-comparatively"><a href="#My-strength-comparatively" class="headerlink" title="My strength comparatively"></a>My strength comparatively</h3><p>Communication / Business Acumen:<br>Had opportunities to communicate with many different people internally and externally and at different levels</p>
+<blockquote>
+<p>Having the ability to conceptualise business problems and the environment in which they occur is critical. And translating statistical insights into recommended actions and implications to a lay audience is absolutely crucial, particularly for Type A data science. I was chatting to Yanir about this, and this is how he put it:<br>“I find it weird how some technical people don’t pay attention to how non-technical people’s eyes glaze over when they start using jargon. It’s really important to put yourself in the listener’s/reader’s shoes”<br><a href="https://medium.com/towards-data-science/how-to-become-a-data-scientist-part-1-3-8706a62b809e" target="_blank" rel="external">How to Become a Data Scientist (Part 1/3)</a></p>
+</blockquote>
+<p>Have hacker mindset (and show the portfolio)</p>
+<h1 id="Terms-I-don’t-understand-yet"><a href="#Terms-I-don’t-understand-yet" class="headerlink" title="Terms I don’t understand yet"></a>Terms I don’t understand yet</h1><p>From an article named <a href="http://hyperparameter.space/blog/when-not-to-use-deep-learning/" target="_blank" rel="external">When Not to Use Deep Learning</a>:</p>
+<ul>
+<li>strong prior</li>
+<li>representation</li>
+<li>embedding</li>
+<li>one-shot learning</li>
+<li>GAN</li>
+<li>stochastic gradient descent</li>
+<li>Bayesian inference</li>
+<li>Markov chain</li>
+<li>variational approximation to the posterior</li>
+<li>optimizers</li>
+</ul>
+<h1 id="Bookmark"><a href="#Bookmark" class="headerlink" title="Bookmark"></a>Bookmark</h1><p><a href="http://students.brown.edu/seeing-theory/" target="_blank" rel="external">Seeing Theory</a> A very beautiful visual introduction to probability and statistics.</p>
+<h1 id="Fun-facts"><a href="#Fun-facts" class="headerlink" title="Fun facts"></a>Fun facts</h1><p>Sam Walton, founder of Walmart, in the 1950s used airplanes to fly over and count cars on parking lots to assess real estate investments.<br>JP Morgan - Big Data and AI Approach to Investment Management</p>
+<h1 id="challenges-of-big-data-and-machine-learning"><a href="#challenges-of-big-data-and-machine-learning" class="headerlink" title="challenges of big data and machine learning"></a>challenges of big data and machine learning</h1><blockquote>
+<p>Potential Pitfalls of Big Data and Machine Learning: The transition to a Big Data framework will not be without setbacks. Certain types of data may lead into blind alleys - datasets that don’t contain alpha, signals that have too little investment capacity, decay quickly, or are simply too expensive to purchase. Managers may invest too much into unnecessary infrastructure e.g. build complex models and architecture that don’t justify marginal performance improvements. Machine Learning algorithms cannot entirely replace human intuition. Sophisticalted models, if not properly guided, can overfit or uncover spurious relationships and patterns. Talent will present another source of risk – employing data scientists who lack specific financial expertise or financial intuition may not lead to the desired investment results or lead to culture clashes. In implementing Big Data and Machine Learning in finance, it is more important to understand the economics behind data and signals, than to be able to develop complex technological solutions. Many Big Data and AI concepts may sound plausible but will not lead to viable trading strategies.</p>
+</blockquote>
+<p>JP Morgan - Big Data and AI Approach to Investment Management</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-08-19T06:37:38.000Z" itemprop="dateUpdated">2017-08-19 14:37:38</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/04/24/data-science/" target="_blank" rel="external">http://yoursite.com/2017/04/24/data-science/</a>
+        
+    </div>
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="Terry Li">
+            Terry Li
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/24/data-science/&title=《Data Science》 — Terry's Notebook&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/04/24/data-science/&title=《Data Science》 — Terry's Notebook&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/04/24/data-science/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Data Science》 — Terry's Notebook&url=http://yoursite.com/2017/04/24/data-science/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/04/24/data-science/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/04/24/notes-on-Hexo/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Notes on Hexo</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Terry Li &copy; 2015 - 2017</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/04/24/data-science/&title=《Data Science》 — Terry's Notebook&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/04/24/data-science/&title=《Data Science》 — Terry's Notebook&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/04/24/data-science/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Data Science》 — Terry's Notebook&url=http://yoursite.com/2017/04/24/data-science/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/04/24/data-science/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/04/24/data-science/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
