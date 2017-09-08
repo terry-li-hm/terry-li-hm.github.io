@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/08/19/ML-Use-Cases/index.html">
 <meta property="og:site_name" content="Terry's Notebook">
 <meta property="og:description" content="Banking 风险监控 智能投顾 (seems not clear evaluation metric?) 通过大数据获得用户个性化的风险偏好及其变化规律 根据用户个性化的风险偏好结合算法模型定制个性化的资产配置方案 利用互联网对用户个性化的资产配置方案进行实时跟踪调整 不追求不顾风险的高收益，在用户可以承受的风险范围内实现收益最大化 generating targeted trading st">
-<meta property="og:updated_time" content="2017-08-20T09:31:10.000Z">
+<meta property="og:updated_time" content="2017-08-20T14:50:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ML Use Cases">
 <meta name="twitter:description" content="Banking 风险监控 智能投顾 (seems not clear evaluation metric?) 通过大数据获得用户个性化的风险偏好及其变化规律 根据用户个性化的风险偏好结合算法模型定制个性化的资产配置方案 利用互联网对用户个性化的资产配置方案进行实时跟踪调整 不追求不顾风险的高收益，在用户可以承受的风险范围内实现收益最大化 generating targeted trading st">
@@ -201,8 +201,9 @@
 <li>generating targeted trading strategies to share with clients: Per page 49 of <a href="https://www.jpmorganchase.com/corporate/investor-relations/document/2016-annualreport.pdf" target="_blank" rel="external">JPMorgan’s 2016 Annual Shareholder Report</a>.</li>
 </ul>
 </li>
-<li>Credit Risk analysis<ul>
+<li>Credit Risk Management<ul>
 <li>传统银行在贷款的时候会对贷款主体进行风险识别和控制，避免把钱带给信誉较差的带块主体导致坏账。当然传统银行更多的是靠人和流程来控制，P2P在这块的创新主要是运用了计算机算法，输入贷款主体的特征（如收入、职业、历史还款记录等），通过逻辑回归或者机器学习的方法，算出贷款主体未来按期还款的概率，提升了单一靠人贷款工作的效率。</li>
+<li>According to <a href="http://financeandriskblog.accenture.com/analytics/where-can-machine-learning-be-applied-to-improve-banking-performance" target="_blank" rel="external">Accenture</a>: <em>The current credit risk workflow tends to be labour intensive, slow and riddled with judgement related human-errors. Machine Learning credit default prediction models allow for more accurate, instant credit decisions as they can automatically use a much broader range of data sources including news and business networks. The algorithms can also be used to improve Early Warning Systems (EWS) and to provide mitigation recommendations, based on previous responses. The result is lower rates of default losses whilst also reducing the risk of losing customers to competitors due to a slow process.</em></li>
 </ul>
 </li>
 <li>身份認證: 將活體識別、聲紋識別等技術用於身份識別，可運用於遠程開戶、遠程授信、刷臉支付等金融交易環節和場景。並且已經和泰康人壽進行合作，進行投保業務的身份認證，也應用在了自己的金融產品百度錢包中，還包括空港易行的機場 VIP 身份認證。</li>
@@ -210,7 +211,11 @@
 <li>Investment Management: As demonstrated in J.P. Morgan’s Guide to Big Data and AI Strategies</li>
 <li>Recommend follow-on equity offerings: Per page 49 of <a href="https://www.jpmorganchase.com/corporate/investor-relations/document/2016-annualreport.pdf" target="_blank" rel="external">JPMorgan’s 2016 Annual Shareholder Report</a>, in 2015 JPMorgan introduced “the Emerging Opportunities Engine, which helps identify clients best positioned for follow-on equity offerings through automated analysis of current financial positions, market conditions and historical data.”</li>
 <li>Extract important data points and clauses from legal documents: Per page 49 of <a href="https://www.jpmorganchase.com/corporate/investor-relations/document/2016-annualreport.pdf" target="_blank" rel="external">JPMorgan’s 2016 Annual Shareholder Report</a>: “As an example, we recently introduced COiN, a contract intelligence platform that uses unsupervised machine learning to analyze legal documents and to extract important data points and clauses. In an initial implementation of this technology, we can extract 150 relevant attributes from 12,000 annual commercial credit agreements in seconds compared with as many as 360,000 hours per year under manual review. This capability has far-reaching implications considering that approximately 80% of loan servicing errors today are due to contract interpretation errors.” But not sure how the analysis results can be further used.</li>
+<li>Fraud Detection<ul>
 <li>detecting anomalies for fraud: Per page 49 of <a href="https://www.jpmorganchase.com/corporate/investor-relations/document/2016-annualreport.pdf" target="_blank" rel="external">JPMorgan’s 2016 Annual Shareholder Report</a>.</li>
+<li>According to <a href="http://financeandriskblog.accenture.com/analytics/where-can-machine-learning-be-applied-to-improve-banking-performance" target="_blank" rel="external">Accenture</a>: <em>Traditional fraud systems identify fraudulent transactions based on specified, non-personalised rules, such as if a customer spends money abroad. Machine Learning systems, on the other hand, analyse large amounts of each customer’s transactions to understand their personal spending patterns. This way, they can spot subtle anomalies that indicate potential fraud. Each transaction is automatically analysed in real-time, and is given a fraud score which represents the probability that it is fraudulent. If it is above a certain threshold, a rejection is triggered immediately. This would be extremely difficult without Machine Learning techniques– as a human could not review thousands of data points in milliseconds and make a decision.</em></li>
+</ul>
+</li>
 <li>中小企業融資: 之所以中小微企業融資難，核心原因在於中小微企業融資渠道依賴銀行，而銀行門檻高、標準高，正如馬雲提出「新金融」時所言：傳統銀行是為有錢人服務的，因為20%的頂部客戶帶來80%的利潤。銀行因為風控要求嚴格，貸款給中小微企業會相當謹慎。對於中小企業這個群體，互聯網公司早已瞄準，阿里巴巴網商銀行主營業務之一是企業貸款，百度則向百度聯盟生態的站長和開發者推出了「聯盟貸」，但這些貸款服務均是B2C模式，只面向特定領域，比如商家、站長、供應鏈金融，能夠覆蓋的中小企業數量有限。民間具有資金能力的銀行和小貸公司還有很多，如何連接這些金融機構和中小企業？答案就是B2B金融平台。隨著科技金融的發展，只要有一定徵信的個人在手機上點點菜單就可以快速貸款甚至秒批，BAT都在搶著給你我借錢，為什麼不將這種服務也提供給中小企業呢？人們在手機上更容易貸款，是因為互聯網金融平台通過大數據做好了風控。同樣，只要能夠通過大數據做好中小企業風控，那麼金融機構就不可以抓住龐大的中小企業客群，這就是「貴州金融大腦」的思路：通過融合貴州省政務、企業、金融、互聯網等多渠道數據，再借助於人工智能技術進行智能風控，讓金融機構可以有效、快速、低成本地評估中小企業的信用，做出貸款決策。在放貸之後則採集數據進行貸後風險預測和監控，及時發現企業經營異常——這相當於傳統銀行的回訪。大數據風控技術早已被應用在百度消費金融業務上，通過智能身份識別、智能風控諸多技術，百度金融教育信貸業務甚至可以做到「秒批」。因此，「貴州金融大腦」不只是可以解決中小企業融資難、融資貴的問題，還可避免繁雜的手續、大量的調查、冗長的流程，智能審批、快速放款，畢竟對於生存能力薄弱、抗風險能力差的中小企業來說，有時候資金鏈斷裂，很可能就倒閉了。對於金融監管機構而言，中小企業和金融機構的金融借貸行為在互聯網上進行，可追溯、可監控、可預警，因而能實現更好的金融管理。另一個角度來看，金融監管機構可以推動政務大數據開放，比如工商資料、納稅記錄、司法記錄等等，來幫助金融大腦做好大數據風控。總之，「金融大腦」越普及，政府金融監管就越有效率，這是貴州省政府金融辦參與建設「貴州金融大腦」 的原因之一。(<a href="http://column.iresearch.cn/b/201705/800281.shtml" target="_blank" rel="external">http://column.iresearch.cn/b/201705/800281.shtml</a>)</li>
 <li>Blockchain<ul>
 <li>Challenge: Crypto-currency and distributed ledger technology are among the most exciting developments in fintech. The ability to record transactions in a transparent manner without an intermediary has revolutionary applications for the financial ecosystem. But maintaining security and trust in the system is paramount.</li>
@@ -227,7 +232,28 @@
 <li>Solution: DataRobot uses past information about borrowers’ default rates to predict the likelihood of default for future borrowers. Incorporating the predictive models built with DataRobot into a real-time loan approval process is easy, allowing businesses to scale up and expand their loan portfolios.</li>
 </ul>
 </li>
+<li>Risk and Finance Reporting<ul>
+<li>According to <a href="http://financeandriskblog.accenture.com/analytics/where-can-machine-learning-be-applied-to-improve-banking-performance" target="_blank" rel="external">Accenture</a>: <em>Cognitive automation appears to be the next development in the world of automation, post Robotic Process Automation (RPA). RPA allows a business to map out simple, rule-based processes and have a computer carry them out on their behalf. Cognitive automation, however, combines this with the ‘thinking’ work of Machine Learning, and programs computers to read and understand unstructured data or text and make subjective decisions in response, similar to a human. This has the potential to transform back office risk and finance reporting processes, enabling banks to meet regulatory reporting requirements at speed, whilst reducing costs.</em></li>
 </ul>
+</li>
+<li>Trading Floors<ul>
+<li>According to <a href="http://financeandriskblog.accenture.com/analytics/where-can-machine-learning-be-applied-to-improve-banking-performance" target="_blank" rel="external">Accenture</a>: <em>With an unstable economic environment creating new risks, with profit margins trending down and continued high regulatory pressure, banks should be exploring the power of Machine Learning across their operations.  The benefits include lower cost bases and improvements in the effectiveness and efficiency of processes, whilst also providing a better level of service and enhanced products and services to their customers.</em></li>
+</ul>
+</li>
+<li>money laundering</li>
+<li>Identity Mind Global: Provides anti-fraud and risk management services for digital transactions by tracking payment entities</li>
+<li>Trunomi: Securely manages the consent to use customer personal data</li>
+<li>Suade: Helps banks to submit required regulatory reports without disruption to the banks’ architecture</li>
+<li>Silverfinch: Connects asset managers and insurers through a fund data utility to meet Solvency II requirements</li>
+<li>Passfort: Automates the collection and storage of customer due diligence data.</li>
+<li>Fund Recs: Oversees how data is managed and processed by the fund industry</li>
+<li>Real-Time Compliance</li>
+<li>加州Mountain View有一个Google Venture投资的科技公司叫Orbital Insight。他们专门用神经网络和深度学习去识别商业卫星拍摄的图片（我猜测大部分是和object recognition相关的技术），然后推测出很多和经济/金融相关的数据/信号。比如他们用卫星拍摄的沃尔玛门前的停车场图片，查一查汽车的数量，去推测这个季度沃尔玛的销售情况</li>
+<li>拍摄炼油厂和储油罐的照片进行分析，来推测现在市场上的石油供应量</li>
+<li>答主在某咨询公司做AI方向的咨询，客户包括各种金融服务类公司。比较常见的案例包括Anti-money Laundering Transactions(反洗钱)，Smooth M&amp;A Model (用于提高并购质量的AI 模型)。虽然真正的交易模型一般都是金融公司独立开发的，但还是有机会和客户讨论金融AI的趋势和模型。</li>
+<li><a href="https://www.toptal.com/finance/market-research-analysts/artificial-intelligence-in-finance" target="_blank" rel="external">How Artificial Intelligence Is Disrupting Finance</a></li>
+</ul>
+<p>Read more: Regtech Definition | Investopedia <a href="http://www.investopedia.com/terms/r/regtech.asp#ixzz4qIpvWuuN" target="_blank" rel="external">http://www.investopedia.com/terms/r/regtech.asp#ixzz4qIpvWuuN</a><br>Follow us: Investopedia on Facebook</p>
 <h1 id="Insurance"><a href="#Insurance" class="headerlink" title="Insurance"></a>Insurance</h1><p>According to <a href="https://www.datarobot.com/use-cases/#insurance" target="_blank" rel="external">DataRobot</a>:</p>
 <ul>
 <li>Life Insurance Underwriting for Impaired Life Customers</li>
@@ -269,7 +295,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-08-20T09:31:10.000Z" itemprop="dateUpdated">2017-08-20 17:31:10</time>
+    Last updated: <time datetime="2017-08-20T14:50:19.000Z" itemprop="dateUpdated">2017-08-20 22:50:19</time>
 </span><br>
 
 
